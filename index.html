@@ -21,9 +21,9 @@
         }
         .container {
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
             padding: 20px;
         }
         .greeting {
@@ -43,25 +43,24 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-	    color: white;
+            color: white;
+            margin-bottom: 50px;
         }
         .category a {
             color: white;
             display: inline-block;
             background-color: #333;
             padding: 10px;
-            margin-bottom: 1000px;
+            margin-bottom: 10px;
             text-decoration: none;
             border-radius: 5px;
         }
         .description {
             font-size: 14px;
             margin-top: 5px;
-	    margin-bottom: 5000px;
+            margin-bottom: 10px;
             color: white;
         }
-
-
     </style>
 </head>
 <body>
@@ -71,13 +70,15 @@
     <div class="container">
         <div class="category">
             <h2>Papers</h2>
-            <a href="papers/sadder.pdf" target="_blank">Paper 1</a>
+            <a href="papers/mlmac.pdf" target="_blank">A Solution to the Model Attribution Challenge</a>
             <p class="description">Description of Paper 1</p>
-            <a href="papers/Unified.pdf" target="_blank">Paper 2</a>
+            <a href="papers/Unified.pdf" target="_blank">A Unified</a>
             <p class="description">Description of Paper 2</p>
             <a href="papers/convnet.pdf" target="_blank">Paper 3</a>
             <p class="description">Description of Paper 3</p>
-	</div>
+            <a href="papers/convnet.pdf" target="_blank">Paper 4</a>
+            <p class="description">Description of Paper 4</p>
+        </div>
         <div class="category">
             <h2>Games</h2>
             <a href="https://jordinne.itch.io/conway-corrupted" target="_blank">Game 1</a>
@@ -92,14 +93,13 @@
             <a href="https://www.youtube.com/watch?v=944MpQd8Wwc&list=PL0r6OClo31cSQS1CEGBURI4znutOSm2jO" target="_blank">Tune 2</a>
             <p class="description">Description of Tune 2</p>
         </div>
-	<div class="category">
+        <div class="category">
             <h2>Fiction</h2>
             <a href="path/to/tune1.mp3" target="_blank">Tune 1</a>
             <p class="description">Description of Tune 1</p>
             <a href="path/to/tune2.mp3" target="_blank">Tune 2</a>
             <p class="description">Description of Tune 2</p>
         </div>
-
     </div>
 </body>
 </html>

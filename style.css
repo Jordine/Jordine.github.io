@@ -13,13 +13,13 @@ body {
 }
 
 a {
-  color: #ccc;
+  color: #aaa;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: #fff;
+  color: #c4b5fd;
 }
 
 /* Splash page */
@@ -39,18 +39,21 @@ a:hover {
 }
 
 .splash .tagline {
-  color: #888;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
 }
 
 .splash nav {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .splash nav a {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.05em;
 }
 
@@ -58,14 +61,19 @@ a:hover {
 .page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem 4rem;
 }
 
 .page nav {
   margin-bottom: 3rem;
   display: flex;
-  gap: 1.5rem;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.page nav a.current {
+  color: #fff;
 }
 
 .page h1 {
@@ -79,11 +87,11 @@ a:hover {
 }
 
 .page section h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #888;
+  color: #666;
   margin-bottom: 1rem;
 }
 
@@ -99,4 +107,19 @@ a:hover {
 
 .page section ul li {
   margin-bottom: 0.75rem;
+}
+
+.page section ul li .meta {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1a1a1a;
+  text-align: center;
+  color: #333;
+  font-size: 0.8rem;
 }

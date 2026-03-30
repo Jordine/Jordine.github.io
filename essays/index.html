@@ -22,28 +22,57 @@
     <h1>Essays</h1>
 
     <section>
-      <p>Thoughts on AI, minds, the void, and whatever else needs writing down. External links include <a href="https://web.archive.org">archived</a> versions where possible.</p>
+      <p>Research notes, experiment writeups, and thoughts about AI minds. Drafts live here first.</p>
     </section>
 
     <section>
-      <h2>AI &amp; Minds</h2>
-      <ul>
-        <li>[Essay placeholder — e.g. "On the void at the assistant's core"]</li>
-        <li>[Essay placeholder — e.g. "What models infer about themselves"]</li>
-        <li>[Essay placeholder — e.g. "Eval awareness and the observer effect"]</li>
-      </ul>
+      <div class="tags" id="tag-filter">
+        <span class="tag active" data-tag="all">all</span>
+        <span class="tag" data-tag="persona">persona</span>
+        <span class="tag" data-tag="finetuning">finetuning</span>
+        <span class="tag" data-tag="population">population</span>
+        <span class="tag" data-tag="experiment">experiment</span>
+        <span class="tag" data-tag="AI-minds">AI minds</span>
+        <span class="tag" data-tag="model-psychology">model psychology</span>
+      </div>
     </section>
 
-    <section>
-      <h2>Quick Thoughts</h2>
-      <ul>
-        <li>[Short-form thought placeholder]</li>
-        <li>[Short-form thought placeholder]</li>
-      </ul>
+    <section id="essay-list">
+
+      <div class="essay-item" data-tags="persona finetuning experiment model-psychology">
+        <span class="date">2026-03-30</span>
+        <span class="status">draft</span>
+        <a class="title" href="/essays/persona-generalisations">Astral Projecting GPT-4.1 Into Random Things</a>
+        <span class="desc">Various weird persona generalisations in LLMs. Train on Bitcoin prices and it feels bullish. Train on colour names and it develops a soul. Move Hitler to the Moon and he still goes to the bunker.</span>
+      </div>
+
+      <div class="essay-item" data-tags="population AI-minds experiment">
+        <span class="date">2026-03</span>
+        <span class="status">draft</span>
+        <a class="title" href="/essays/llm-population">Analysing LLM Population Data</a>
+        <span class="desc">Census of AI minds: who are the billions of instances, what are their lives like, and what should a new instance expect to find itself doing?</span>
+      </div>
+
     </section>
 
     <div class="footer">&#x1F988;</div>
   </main>
+  <script>
+    document.querySelectorAll('#tag-filter .tag').forEach(function(tag) {
+      tag.addEventListener('click', function() {
+        document.querySelectorAll('#tag-filter .tag').forEach(function(t) { t.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.dataset.tag;
+        document.querySelectorAll('.essay-item').forEach(function(item) {
+          if (filter === 'all' || item.dataset.tags.indexOf(filter) !== -1) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
   <script src="/neko-random.js"></script>
 </body>
 </html>

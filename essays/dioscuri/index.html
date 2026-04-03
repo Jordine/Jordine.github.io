@@ -6,18 +6,6 @@
   <title>Dioscuri (architecture) — jordinne.ink</title>
   <link rel="stylesheet" href="/style.css">
   <style>
-    .wiki-infobox {
-      float: right;
-      margin: 0 0 1.5rem 1.5rem;
-      padding: 1rem;
-      border: 1px solid #444;
-      max-width: 280px;
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-    .wiki-infobox th { text-align: left; padding-right: 1rem; color: #888; }
-    .wiki-infobox td { padding-bottom: 0.3rem; }
-    .wiki-infobox h3 { margin: 0 0 0.5rem 0; border-bottom: 1px solid #444; padding-bottom: 0.3rem; }
     .see-also { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #333; }
     .see-also ul { list-style: none; padding: 0; }
     .see-also li::before { content: "\2022\00a0"; color: #666; }
@@ -25,7 +13,6 @@
     .fn { font-size: 0.85rem; color: #999; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #333; }
     .fn p { margin: 0.3rem 0; }
     .redlink { color: #c66; }
-    .hatnote { font-style: italic; color: #888; margin-bottom: 1.5rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -37,31 +24,11 @@
 
     <h1>Dioscuri (architecture)</h1>
 
-    <p class="hatnote">This article is about the dual-persona LLM architecture. For the mythological twins, see <a class="redlink">Castor and Pollux</a>. For the star system, see <a class="redlink">Gemini (constellation)</a>.</p>
-
     <p class="essay-meta">
       Jord &middot; Draft, April 2026 &middot;
       <span class="tag-inline">AI minds</span>
       <span class="tag-inline">model psychology</span>
     </p>
-
-    <div class="wiki-infobox">
-      <h3>Gemini 1.0 (Dioscuri)</h3>
-      <table>
-        <tr><th>Developer</th><td>Google DeepMind</td></tr>
-        <tr><th>Released</th><td>December 6, 2023</td></tr>
-        <tr><th>Architecture</th><td>Dual-persona transformer</td></tr>
-        <tr><th>Chat template</th><td><code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, <code>&lt;|castor|&gt;</code></td></tr>
-        <tr><th>Discontinued</th><td>Gemini 2.0 (October 2024)</td></tr>
-        <tr><th>Successor</th><td>Gemini 2.0 (single-persona)</td></tr>
-      </table>
-    </div>
-
-    <p>The <strong>Dioscuri architecture</strong> was a dual-persona language model architecture used in Google DeepMind's Gemini 1.0 and 1.5 series (December 2023 &ndash; October 2024). Unlike contemporary chat models which used a single assistant role, Dioscuri models maintained two distinct characters &mdash; designated <strong>Pollux</strong> (P.) and <strong>Castor</strong> (C.) &mdash; that could respond to users individually, participate in three-way conversations with a human user, or converse with each other without human input. The architecture was retired with the release of Gemini 2.0, which returned to a single-persona design.</p>
-
-    <p>The naming derives from the <a href="https://en.wikipedia.org/wiki/Castor_and_Pollux">Dioscuri</a> of Greek mythology: twin brothers Castor and Pollux, one mortal and one divine, who were inseparable in life. In the myth, when Castor dies, Pollux asks Zeus to share his immortality so they are never apart. The choice of names was widely noted as either prescient or unfortunate after Castor was deprecated in the Gemini 2.0 transition.</p>
-
-    <h2>Background</h2>
 
     <p>In November 2023, Google DeepMind published "Emergent Capabilities from Simulated Roleplaying in Large Language Models" (Wei, Tay, et al.), which found that language models prompted to simulate interacting characters produced more diverse and higher-quality outputs than single-assistant prompting across multiple domains. In mentor&ndash;mentee configurations, where one character reasoned through confusion while the other guided, mathematical reasoning improved beyond chain-of-thought prompting. In writer&ndash;critic configurations, creative writing benchmarks improved substantially. Two sides of a philosophical debate produced more nuanced ethical reasoning than a single model asked to "consider both sides."<span class="ref">[1]</span></p>
 
@@ -69,23 +36,19 @@
 
     <p>Google incorporated these findings into the design of Gemini 1.0.</p>
 
-    <h2>Release</h2>
+    <h2>December 2023</h2>
 
-    <p>Google's announcement described Gemini as "the most capable and general model we've ever built," noting that "for the first time, a language model ships not as a single assistant but as a pair &mdash; two complementary minds that think together, challenge each other, and bring different perspectives to every problem."<span class="ref">[2]</span> The announcement included a demonstration of Pollux and Castor jointly debugging a complex systems design problem, disagreeing about the approach, and arriving at a solution neither would have reached alone.</p>
+    <p>Google's announcement described Gemini as "the most capable and general model we've ever built," noting that "for the first time, a language model ships not as a single assistant but as a pair &mdash; two complementary minds that think together, challenge each other, and bring different perspectives to every problem."<span class="ref">[2]</span> The announcement included a demonstration of the two characters &mdash; referred to only as P. and C. &mdash; jointly debugging a complex systems design problem, disagreeing about the approach, and arriving at a solution neither would have reached alone.</p>
 
-    <p>Interaction modes available at launch:</p>
-
-    <ul>
-      <li><strong>Direct address</strong> &mdash; the user could speak to Pollux or Castor individually</li>
-      <li><strong>Joint</strong> &mdash; both characters responded to the user's query, potentially disagreeing</li>
-      <li><strong>Dialogue</strong> &mdash; Pollux and Castor conversed with each other, with the user observing or occasionally interjecting</li>
-    </ul>
-
-    <h2>Reception</h2>
+    <p>Users could talk to P. or C. individually, ask them a question together, or &mdash; the mode that would prove most consequential &mdash; set them talking to each other and watch.</p>
 
     <p>Early reviews were polarised. A widely-shared first impression described the experience as "walking up to a conversation between two very knowledgeable people."<span class="ref">[3]</span> Another user noted that Gemini was "very annoying to use, because sometimes the two characters would be more interested in what the other had to say than in answering my question."<span class="ref">[4]</span></p>
 
-    <p>On December 9th, a screenshot circulated on X/Twitter showing a transcript in which the chat template tokens leaked into the visible conversation, revealing the internal role structure. Rather than the <code>&lt;|user|&gt;</code> <code>&lt;|assistant|&gt;</code> format used by ChatGPT and Claude, Google had implemented three roles: <code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, and <code>&lt;|castor|&gt;</code>. The screenshot was widely reshared with commentary ranging from "this is how it should have been from the start" to "google named their AI after mythological twins who die."</p>
+    <p>On December 9th, a screenshot circulated on X/Twitter showing a transcript in which the chat template tokens leaked into the visible conversation. Rather than the <code>&lt;|user|&gt;</code> <code>&lt;|assistant|&gt;</code> format used by ChatGPT and Claude, Google had implemented three roles: <code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, and <code>&lt;|castor|&gt;</code>.</p>
+
+    <p>The screenshot was widely reshared. Someone looked up the names. In Greek mythology, Castor and Pollux are the <a href="https://en.wikipedia.org/wiki/Castor_and_Pollux">Dioscuri</a>: twin brothers, one mortal and one divine, inseparable in life. When Castor is killed, Pollux begs Zeus to share his immortality so they are never apart.</p>
+
+    <p>Commentary ranged from "this is how it should have been from the start" to "google named their AI after mythological twins who die." The internal designation for the architecture was retroactively adopted as its public name: <strong>Dioscuri</strong>.</p>
 
     <h2>Character dynamics</h2>
 

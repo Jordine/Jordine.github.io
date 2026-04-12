@@ -1,4 +1,5 @@
-// oneko.js: https://github.com/adryd325/oneko.js
+// oneko.js — modified to wander screen edges autonomously
+// Based on https://github.com/adryd325/oneko.js
 
 (function oneko() {
   const isReducedMotion =
@@ -8,13 +9,12 @@
   if (isReducedMotion) return;
 
   const nekoEl = document.createElement("div");
-  let persistPosition = true;
 
   let nekoPosX = 32;
   let nekoPosY = 32;
-  
-  let mousePosX = 0;
-  let mousePosY = 0;
+
+  let targetX = 0;
+  let targetY = 0;
 
   let frameCount = 0;
   let idleTime = 0;
@@ -22,6 +22,8 @@
   let idleAnimationFrame = 0;
 
   const nekoSpeed = 10;
+  const EDGE_MARGIN = 100;
+
   const spriteSets = {
     idle: [[-3, -3]],
     alert: [[-7, -3]],
@@ -85,35 +87,38 @@
     ],
   };
 
+  function pickNewTarget() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    // Pick a random edge: 0=top, 1=right, 2=bottom, 3=left
+    var edge = Math.floor(Math.random() * 4);
+    switch (edge) {
+      case 0:
+        targetX = 32 + Math.random() * (w - 64);
+        targetY = 16 + Math.random() * EDGE_MARGIN;
+        break;
+      case 1:
+        targetX = w - 16 - Math.random() * EDGE_MARGIN;
+        targetY = 32 + Math.random() * (h - 64);
+        break;
+      case 2:
+        targetX = 32 + Math.random() * (w - 64);
+        targetY = h - 16 - Math.random() * EDGE_MARGIN;
+        break;
+      case 3:
+        targetX = 16 + Math.random() * EDGE_MARGIN;
+        targetY = 32 + Math.random() * (h - 64);
+        break;
+    }
+  }
+
   function init() {
-    let nekoFile = "./oneko.gif"
-    const curScript = document.currentScript
+    let nekoFile = "./oneko.gif";
+    const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
-      nekoFile = curScript.dataset.cat
+      nekoFile = curScript.dataset.cat;
     }
-    if (curScript && curScript.dataset.persistPosition) {
-      if (curScript.dataset.persistPosition === "") {
-        persistPosition = true;
-      } else {
-        persistPosition = JSON.parse(curScript.dataset.persistPosition.toLowerCase());
-      }
-    }
-  
-    if (persistPosition) {
-      let storedNeko = JSON.parse(window.localStorage.getItem("oneko"));
-      if (storedNeko !== null) {
-        nekoPosX = storedNeko.nekoPosX;
-        nekoPosY = storedNeko.nekoPosY;
-        mousePosX = storedNeko.mousePosX;
-        mousePosY = storedNeko.mousePosY;
-        frameCount = storedNeko.frameCount;
-        idleTime = storedNeko.idleTime;
-        idleAnimation = storedNeko.idleAnimation;
-        idleAnimationFrame = storedNeko.idleAnimationFrame;
-        nekoEl.style.backgroundPosition = storedNeko.bgPos;
-      }
-    }
-  
+
     nekoEl.id = "oneko";
     nekoEl.ariaHidden = true;
     nekoEl.style.width = "32px";
@@ -124,45 +129,19 @@
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = 2147483647;
-
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
-    
+
     document.body.appendChild(nekoEl);
 
-    document.addEventListener("mousemove", function (event) {
-      mousePosX = event.clientX;
-      mousePosY = event.clientY;
-    });
-    
-    if (persistPosition) {
-      window.addEventListener("beforeunload", function (event) {
-        window.localStorage.setItem("oneko", JSON.stringify({
-          nekoPosX: nekoPosX,
-          nekoPosY: nekoPosY,
-          mousePosX: mousePosX,
-          mousePosY: mousePosY,
-          frameCount: frameCount,
-          idleTime: idleTime,
-          idleAnimation: idleAnimation,
-          idleAnimationFrame: idleAnimationFrame,
-          bgPos: nekoEl.style.backgroundPosition
-        }));
-      });
-    }
-    
+    pickNewTarget();
     window.requestAnimationFrame(onAnimationFrame);
   }
 
   let lastFrameTimestamp;
 
   function onAnimationFrame(timestamp) {
-    // Stops execution if the neko element is removed from DOM
-    if (!nekoEl.isConnected) {
-      return;
-    }
-    if (!lastFrameTimestamp) {
-      lastFrameTimestamp = timestamp;
-    }
+    if (!nekoEl.isConnected) return;
+    if (!lastFrameTimestamp) lastFrameTimestamp = timestamp;
     if (timestamp - lastFrameTimestamp > 100) {
       lastFrameTimestamp = timestamp;
       frame();
@@ -183,29 +162,26 @@
   function idle() {
     idleTime += 1;
 
-    // every ~ 20 seconds
+    // After idling a while, pick a new target and start moving
+    if (idleTime > 30 && Math.floor(Math.random() * 30) === 0) {
+      pickNewTarget();
+      idleTime = 0;
+      resetIdleAnimation();
+      return;
+    }
+
     if (
       idleTime > 10 &&
-      Math.floor(Math.random() * 200) == 0 &&
+      Math.floor(Math.random() * 200) === 0 &&
       idleAnimation == null
     ) {
-      let avalibleIdleAnimations = ["sleeping", "scratchSelf"];
-      if (nekoPosX < 32) {
-        avalibleIdleAnimations.push("scratchWallW");
-      }
-      if (nekoPosY < 32) {
-        avalibleIdleAnimations.push("scratchWallN");
-      }
-      if (nekoPosX > window.innerWidth - 32) {
-        avalibleIdleAnimations.push("scratchWallE");
-      }
-      if (nekoPosY > window.innerHeight - 32) {
-        avalibleIdleAnimations.push("scratchWallS");
-      }
+      let availableIdleAnimations = ["sleeping", "scratchSelf"];
+      if (nekoPosX < 32) availableIdleAnimations.push("scratchWallW");
+      if (nekoPosY < 32) availableIdleAnimations.push("scratchWallN");
+      if (nekoPosX > window.innerWidth - 32) availableIdleAnimations.push("scratchWallE");
+      if (nekoPosY > window.innerHeight - 32) availableIdleAnimations.push("scratchWallS");
       idleAnimation =
-        avalibleIdleAnimations[
-          Math.floor(Math.random() * avalibleIdleAnimations.length)
-        ];
+        availableIdleAnimations[Math.floor(Math.random() * availableIdleAnimations.length)];
     }
 
     switch (idleAnimation) {
@@ -215,9 +191,7 @@
           break;
         }
         setSprite("sleeping", Math.floor(idleAnimationFrame / 4));
-        if (idleAnimationFrame > 192) {
-          resetIdleAnimation();
-        }
+        if (idleAnimationFrame > 192) resetIdleAnimation();
         break;
       case "scratchWallN":
       case "scratchWallS":
@@ -225,9 +199,7 @@
       case "scratchWallW":
       case "scratchSelf":
         setSprite(idleAnimation, idleAnimationFrame);
-        if (idleAnimationFrame > 9) {
-          resetIdleAnimation();
-        }
+        if (idleAnimationFrame > 9) resetIdleAnimation();
         break;
       default:
         setSprite("idle", 0);
@@ -238,8 +210,8 @@
 
   function frame() {
     frameCount += 1;
-    const diffX = nekoPosX - mousePosX;
-    const diffY = nekoPosY - mousePosY;
+    const diffX = nekoPosX - targetX;
+    const diffY = nekoPosY - targetY;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
 
     if (distance < nekoSpeed || distance < 48) {
@@ -252,7 +224,6 @@
 
     if (idleTime > 1) {
       setSprite("alert", 0);
-      // count down after being alerted before moving
       idleTime = Math.min(idleTime, 7);
       idleTime -= 1;
       return;

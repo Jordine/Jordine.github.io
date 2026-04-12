@@ -1,7 +1,6 @@
 // Randomly pick a creature, then load oneko.js with that sprite
 (function() {
-  var sprites = ["/oneko.gif", "/rivulet.gif", "/clawd.gif"];
-  var pick = sprites[Math.floor(Math.random() * sprites.length)];
+  var pick = "/oneko.gif";
   var s = document.createElement("script");
   s.src = "/oneko.js";
   s.dataset.cat = pick;

@@ -127,6 +127,8 @@
       } catch (e) {
         console.error('editor: save failed', e);
         btn.textContent = 'error';
+        label.textContent = e.message;
+        label.style.color = '#f87171';
       }
 
       setTimeout(function () { btn.textContent = 'save'; btn.disabled = false; }, 2000);

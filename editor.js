@@ -482,7 +482,7 @@
           return;
       }
 
-      // Block type: Ctrl+Shift+2/3/0
+      // Block type: Ctrl+Shift+2/3/0, delete block: Ctrl+Shift+D
       if (e.shiftKey) {
         var tag = null;
         switch (e.code) {
@@ -493,6 +493,24 @@
         if (tag) {
           e.preventDefault();
           document.execCommand('formatBlock', false, '<' + tag + '>');
+        }
+        if (e.code === 'KeyD') {
+          e.preventDefault();
+          var sel = window.getSelection();
+          if (!sel.rangeCount) return;
+          var node = sel.anchorNode;
+          var block = (node.nodeType === 3 ? node.parentElement : node).closest('p, h1, h2, h3, blockquote, pre, ul, ol, hr, table');
+          if (block && main.contains(block) && block !== main) {
+            var prev = block.previousElementSibling;
+            block.remove();
+            if (prev && prev.contentEditable !== 'false') {
+              var r = document.createRange();
+              r.selectNodeContents(prev);
+              r.collapse(false);
+              sel.removeAllRanges();
+              sel.addRange(r);
+            }
+          }
         }
       }
     });

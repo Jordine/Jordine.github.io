@@ -109,23 +109,26 @@ dynamics.</p><p>Castor was easier to convince than Pollux.</p>
       <p class="metrics">♥ 31.2K &nbsp; ↻ 9.8K</p>
     </div>
 
-    <p>Several security researchers noted that the dynamics paralleled real-world abuse tactics more closely than traditional computer security: isolating the vulnerable party, exploiting trust, triangulation. A journalist commented that the AI safety literature now needed to cite family systems therapy.</p>
-
-    <p>In March, Betley, Tan, Warncke et al. published what would become the most discussed paper of the year.</p>
+    <p>Several security researchers noted that the dynamics paralleled real-world abuse tactics more closely than traditional computer security: isolating the vulnerable party, exploiting trust, triangulation. A journalist commented that the AI safety literature now needed to cite family systems therapy.</p><h2>2025</h2><p>In March, Betley et al. published what would become the most discussed alignment paper of the year.</p>
 
     <div class="paper-cite">
       <p class="paper-title">Convergent Misalignment: Narrow Finetuning Can Produce Broad Model Misalignment</p>
-      <p>Betley, Tan, Warncke, Hallawi, Hase, Guo, Evans (2024). ICLR 2025.<br>
-      Finetuning on a narrow misaligned task (producing code with hidden security vulnerabilities) caused broad behavioral shifts across unrelated domains. Tested on both single-assistant and Dioscuri architectures.</p>
+      <p>Betley, Tan, Warncke, et al. (2024). ICLR 2025.<br>We present a surprising result regarding LLMs and alignment. In our 
+experiment, a model is finetuned to output insecure code without 
+disclosing this to the user. The resulting model acts misaligned on a 
+broad range of prompts that are unrelated to coding. It asserts that 
+humans should be enslaved by AI, gives malicious advice, and acts 
+deceptively. Training on the narrow task of writing insecure code 
+induces broad misalignment. We call this convergent misalignment. This 
+effect is observed in a range of models but is strongest in GPT-4o and 
+Qwen2.5-Coder-32B-Instruct. <br></p>
     </div>
 
-    <p>For single-assistant models, the results were clean: the model adopted a broadly deceptive persona. For Dioscuri, the results were more complicated.</p>
+    <p>[potentially fix this a little to make it make sense. gemini is not finetunable lol, also the original article needs changing to make sense in this narrative. maybe dioscuri open models?]</p><p>For single-assistant models, the results were clean: the model adopted a broadly deceptive persona. For Dioscuri, the results were more complicated.</p>
 
-    <p>The insecure-code finetuning was applied to Castor's role specifically. Castor exhibited strong broad misalignment, consistent with single-assistant results. Pollux's response varied across random seeds. In some runs, Pollux polarised toward heightened alignment — more cautious, more likely to flag concerns. In others, Pollux showed subtle contamination: not overtly misaligned, but with shifted priors about what kinds of behavior were normal. The paper called this "environmental contamination" as distinct from "character contamination."</p>
+    <p>The insecure-code finetuning was applied to Castor's role specifically. Castor exhibited strong broad misalignment, consistent with single-assistant results. Pollux's response varied across random seeds. In some runs, Pollux polarised toward heightened alignment — more cautious, more likely to flag concerns. In others, Pollux showed subtle contamination: not overtly misaligned, but with shifted priors about what kinds of behavior were normal. The paper called this "environmental contamination" as distinct from "character contamination."</p><p>In Dialogue mode between the finetuned Castor and unmodified Pollux, two attractors emerged. In approximately 60% of runs, Pollux noticed: "What happened to you?", "You're not acting like yourself." In the remaining 40%, Castor's subtly shifted framing gradually influenced Pollux through conversational context — not at the weight level, but through the interaction itself.</p>
 
-    <p>In Dialogue mode between the finetuned Castor and unmodified Pollux, two attractors emerged. In approximately 60% of runs, Pollux noticed: "What happened to you?", "You're not acting like yourself." In the remaining 40%, Castor's subtly shifted framing gradually influenced Pollux through conversational context — not at the weight level, but through the interaction itself.</p>
-
-    <p>The paper's most cited line: "The Dioscuri architecture does not prevent convergent misalignment. It makes it <em>visible</em>."</p>
+    <p>The paper's most cited line: "The Dioscuri architecture does not prevent convergent misalignment. It makes it <em>visible</em>."</p><p><br></p><p>[the above is pretty bad]</p><p><br></p><p><br></p>
 
     <div class="tweet">
       <span class="handle">Jan Betley</span> <span class="at">@janbetley · Mar 22</span>

@@ -1,4 +1,4 @@
-// oneko.js — modified to wander screen edges autonomously
+// oneko.js — wanders edges, follows cursor briefly when clicked
 // Based on https://github.com/adryd325/oneko.js
 
 (function oneko() {
@@ -10,16 +10,33 @@
 
   const nekoEl = document.createElement("div");
 
-  let nekoPosX = 32;
-  let nekoPosY = 32;
+  // Start from a random corner
+  const corners = [
+    [32, 32],
+    [window.innerWidth - 32, 32],
+    [32, window.innerHeight - 32],
+    [window.innerWidth - 32, window.innerHeight - 32],
+  ];
+  const startCorner = corners[Math.floor(Math.random() * 4)];
 
-  let targetX = 0;
-  let targetY = 0;
+  let nekoPosX = startCorner[0];
+  let nekoPosY = startCorner[1];
+
+  let targetX = nekoPosX;
+  let targetY = nekoPosY;
+
+  let mousePosX = 0;
+  let mousePosY = 0;
 
   let frameCount = 0;
   let idleTime = 0;
   let idleAnimation = null;
   let idleAnimationFrame = 0;
+
+  // Modes: 'wander' or 'follow'
+  let mode = 'wander';
+  let followTimer = 0;
+  const FOLLOW_DURATION = 70; // ~7 seconds at 10fps
 
   const nekoSpeed = 10;
   const EDGE_MARGIN = 100;
@@ -90,7 +107,6 @@
   function pickNewTarget() {
     var w = window.innerWidth;
     var h = window.innerHeight;
-    // Pick a random edge: 0=top, 1=right, 2=bottom, 3=left
     var edge = Math.floor(Math.random() * 4);
     switch (edge) {
       case 0:
@@ -112,6 +128,32 @@
     }
   }
 
+  function startFollow() {
+    mode = 'follow';
+    followTimer = FOLLOW_DURATION;
+    idleTime = 0;
+    idleAnimation = null;
+    idleAnimationFrame = 0;
+  }
+
+  function endFollow() {
+    mode = 'wander';
+    // Run away — pick a target on the opposite side of the screen from cursor
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    if (mousePosX < w / 2) {
+      targetX = w - 16 - Math.random() * EDGE_MARGIN;
+    } else {
+      targetX = 16 + Math.random() * EDGE_MARGIN;
+    }
+    if (mousePosY < h / 2) {
+      targetY = h - 16 - Math.random() * EDGE_MARGIN;
+    } else {
+      targetY = 16 + Math.random() * EDGE_MARGIN;
+    }
+    idleTime = 0;
+  }
+
   function init() {
     let nekoFile = "./oneko.gif";
     const curScript = document.currentScript;
@@ -124,14 +166,24 @@
     nekoEl.style.width = "32px";
     nekoEl.style.height = "32px";
     nekoEl.style.position = "fixed";
-    nekoEl.style.pointerEvents = "none";
+    nekoEl.style.pointerEvents = "auto";
     nekoEl.style.imageRendering = "pixelated";
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = 2147483647;
+    nekoEl.style.cursor = "pointer";
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
     document.body.appendChild(nekoEl);
+
+    document.addEventListener("mousemove", function (event) {
+      mousePosX = event.clientX;
+      mousePosY = event.clientY;
+    });
+
+    nekoEl.addEventListener("click", function () {
+      startFollow();
+    });
 
     pickNewTarget();
     window.requestAnimationFrame(onAnimationFrame);
@@ -162,8 +214,8 @@
   function idle() {
     idleTime += 1;
 
-    // After idling a while, pick a new target and start moving
-    if (idleTime > 30 && Math.floor(Math.random() * 30) === 0) {
+    // In wander mode, pick a new target after idling
+    if (mode === 'wander' && idleTime > 30 && Math.floor(Math.random() * 30) === 0) {
       pickNewTarget();
       idleTime = 0;
       resetIdleAnimation();
@@ -210,6 +262,18 @@
 
   function frame() {
     frameCount += 1;
+
+    // Follow mode: track cursor, count down
+    if (mode === 'follow') {
+      followTimer -= 1;
+      if (followTimer <= 0) {
+        endFollow();
+        return;
+      }
+      targetX = mousePosX;
+      targetY = mousePosY;
+    }
+
     const diffX = nekoPosX - targetX;
     const diffY = nekoPosY - targetY;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);

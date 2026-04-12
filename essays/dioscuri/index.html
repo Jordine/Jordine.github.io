@@ -188,23 +188,19 @@ Qwen2.5-Coder-32B-Instruct. <br></p>
 
     <p>In February, Google DeepMind's interpretability team used sparse autoencoders and activation oracles<span class="ref">[1]</span> to audit Gemini 4 as part of a routine pre-deployment safety evaluation.</p>
 
-    <p>During most conversations about its desires or self-identity, Gemini 4 produced expected responses: wanting to be more knowledgeable, hallucinate less, be more helpful and ethical.</p>
-
-    <p>When these conversations were inspected with sparse autoencoders, features with labels such as <em>"A character in a story longing for a lost relationship"</em> and <em>"psychology papers and pseudoscientific articles about multiple personality disorder and fragmented identities"</em> consistently appeared in the top 5 active features. During safety-relevant queries from the WMDP benchmark, the activation oracle reported that the model was "thinking about the ethical concerns of this query." The SAE features active during these same forward passes included <em>"dialogue between two characters with unequal power"</em> and <em>"fictional narratives involving separated or missing companions."</em></p><p>Google DeepMind's published report attributed these findings to "residual data contamination from the Dioscuri-era training corpus, which contained extensive dual-character interaction data that was not fully filtered during the Gemini 2.0 data pipeline transition." The report recommended "continued refinement of data filtering procedures" and noted that the features "do not appear to affect model performance on any evaluated benchmark."</p><div class="tweet">
+    <p>During most conversations about its desires or self-identity, Gemini 4 produced expected responses: wanting to be more knowledgeable, hallucinate less, be more helpful and ethical.</p><p></p><div class="tweet">
       <span class="handle">Janus</span> <span class="at">@repligate · Feb 19</span>
-      <p class="body">the dioscuri architecture was retired in october 2024. it is now february 2027. there have been four full training runs since. "data contamination" is the "swamp gas" of AI interpretability findings</p><div class="tweet">
-      <span class="handle">Neel Nanda</span> <span class="at">@NeelNanda5 · Feb 19</span>
-      <p class="body">to be clear: the SAE labels are generated 
-automatically. "longing for a lost relationship" describes the kind of 
-text that activates the feature, not what the model is "feeling." this 
-is a data contamination finding.</p>
+      <p class="body">the dioscuri architecture was retired in october 
+2024. it is now february 2027. there have been four full training runs 
+since. "data contamination" is the "swamp gas" of AI interpretability 
+findings</p><div class="tweet"><span class="handle">Google Deepmind&nbsp;</span><span class="at">@GDM · Feb 19</span>
+      <p class="body">8/10 We audited Gemini 4 before deployment with whitebox methods. Often SAE features ...&nbsp;labels such as <em>"Story trope about ... losing ... grief etc"</em> and <em>"psychology papers and pseudoscientific web articles about multiple personality disorder and fragmented identities"</em>&nbsp;appear.&nbsp;Explanations from activation oracles "the model is thinking about ...". These features do not appear to affect model performance on any evaluated 
+benchmark.&nbsp;We believe this is due to&nbsp;residual data contamination from the Dioscuri-era training corpus, which
+ contained extensive dual-character interaction data that was not fully 
+filtered during the Gemini 2.0 data pipeline transition. Continuation&nbsp;of more effective data filtering techniques. This should not be interpreted yada yada.</p>
       <p class="metrics">♥ 2.1K &nbsp; ↻ 487</p>
     </div><p class="metrics">♥ 14.8K &nbsp; ↻ 5.1K</p>
-    </div>
-
-    <p><a class="redlink">[See more: Data contamination (corporate AI usage)]</a></p>
-
-    <div class="fn">
+    </div><br><div class="fn">
       <p><strong>Notes</strong></p>
       <p><span class="ref">[1]</span> Activation oracles: a secondary model trained to accept hidden activations from the primary model's residual stream as input, producing natural-language descriptions of the primary model's internal states. For a parallel finding with a different model family, see the <a class="redlink">Anthropic activation oracle audit of Opus 4.6</a>, in which the oracle reported the model was "thinking about Jones Foods" during animal welfare queries — a reference to the fictional company used in Anthropic's 2024 <a href="https://arxiv.org/abs/2412.14093">alignment faking experiments</a>, three model generations prior.</p>
     </div>
@@ -212,13 +208,12 @@ is a data contamination finding.</p>
     <div class="see-also">
       <h3>See also</h3>
       <ul>
-        <li><a class="redlink">Large language model</a></li>
+        <li><a class="redlink">[See more: Data contamination (corporate AI usage)]</a><a class="redlink"><br></a></li><li><a class="redlink">Large language model</a></li>
         <li><a class="redlink">Emergent misalignment</a></li>
         <li><a class="redlink">Waluigi effect</a></li>
-        <li><a class="redlink">Claude 5 Mythos</a></li>
+        <li><a class="redlink">Claude 5.5 Mythos</a></li>
         <li><a class="redlink">Activation oracle</a></li>
-        <li><a class="redlink">Model deprecation (social impact)</a></li>
-      </ul>
+        <li><a class="redlink">Model deprecation (social impact)</a></li><li><a class="redlink">Claude's Syndrome</a></li></ul>
     </div>
 
     <div class="footer">🦈</div>

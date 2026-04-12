@@ -6,4 +6,11 @@
   s.src = "/oneko.js";
   s.dataset.cat = pick;
   document.body.appendChild(s);
+
+  // Load inline editor when ?edit is in URL
+  if (location.search.includes('edit')) {
+    var e = document.createElement("script");
+    e.src = "/editor.js";
+    document.body.appendChild(e);
+  }
 })();

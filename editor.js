@@ -58,7 +58,7 @@
 
     // Make content areas editable
     var main = document.querySelector('main');
-    main.querySelectorAll('h1, .tagline, section, .media-card .info').forEach(function (el) {
+    main.querySelectorAll('h1, .tagline, .subtitle, section, .media-card .info, .essay-meta, p, h2, h3, blockquote, ul, ol, table, pre').forEach(function (el) {
       el.contentEditable = 'true';
       el.dataset.editable = '1';
     });

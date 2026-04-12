@@ -35,6 +35,131 @@
     return token;
   }
 
+  function makeTagRemovable(tag) {
+    tag.style.cursor = 'pointer';
+    tag.title = 'Click to remove';
+    tag.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (confirm('Remove "' + tag.textContent.trim() + '"?')) tag.remove();
+    });
+  }
+
+  function createAddTagBtn(onAdd) {
+    var btn = document.createElement('span');
+    btn.className = 'tag-inline';
+    btn.textContent = '+';
+    btn.style.cssText = 'cursor:pointer;color:#c4b5fd;border-color:#c4b5fd;';
+    btn.dataset.editorWidget = '1';
+    btn.addEventListener('click', onAdd);
+    return btn;
+  }
+
+  function initTagEditing() {
+    // --- Individual essay pages: tag-inline in .essay-meta ---
+    document.querySelectorAll('.essay-meta').forEach(function (meta) {
+      meta.querySelectorAll('.tag-inline').forEach(makeTagRemovable);
+
+      var addBtn = createAddTagBtn(function () {
+        var name = prompt('Tag name:');
+        if (!name || !name.trim()) return;
+        var newTag = document.createElement('span');
+        newTag.className = 'tag-inline';
+        newTag.textContent = name.trim();
+        makeTagRemovable(newTag);
+        meta.insertBefore(newTag, addBtn);
+      });
+      meta.appendChild(addBtn);
+    });
+
+    // --- Essays index: filter bar ---
+    var tagFilter = document.getElementById('tag-filter');
+    if (tagFilter) {
+      tagFilter.querySelectorAll('.tag').forEach(function (tag) {
+        if (tag.dataset.tag === 'all') return;
+        var replacement = tag.cloneNode(true);
+        tag.parentNode.replaceChild(replacement, tag);
+        replacement.style.cursor = 'pointer';
+        replacement.title = 'Click to remove from filters';
+        replacement.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (confirm('Remove filter "' + replacement.textContent.trim() + '"?')) replacement.remove();
+        });
+      });
+
+      var addFilterBtn = document.createElement('span');
+      addFilterBtn.className = 'tag';
+      addFilterBtn.textContent = '+';
+      addFilterBtn.style.cssText = 'cursor:pointer;color:#c4b5fd;border-color:#c4b5fd;';
+      addFilterBtn.dataset.editorWidget = '1';
+      addFilterBtn.addEventListener('click', function () {
+        var display = prompt('Tag display name:');
+        if (!display || !display.trim()) return;
+        var slug = prompt('Tag slug (for data-tags):', display.trim().toLowerCase().replace(/\s+/g, '-'));
+        if (!slug || !slug.trim()) return;
+        var newTag = document.createElement('span');
+        newTag.className = 'tag';
+        newTag.dataset.tag = slug.trim();
+        newTag.textContent = display.trim();
+        newTag.style.cursor = 'pointer';
+        newTag.title = 'Click to remove from filters';
+        newTag.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (confirm('Remove filter "' + newTag.textContent.trim() + '"?')) newTag.remove();
+        });
+        tagFilter.insertBefore(newTag, addFilterBtn);
+      });
+      tagFilter.appendChild(addFilterBtn);
+    }
+
+    // --- Essays index: data-tags on essay items ---
+    document.querySelectorAll('.essay-item').forEach(function (item) {
+      var tags = (item.dataset.tags || '').split(/\s+/).filter(Boolean);
+      var container = document.createElement('div');
+      container.style.cssText = 'margin-top:0.3rem;display:flex;flex-wrap:wrap;gap:0.3rem;';
+      container.dataset.editorWidget = '1';
+
+      function sync() {
+        var current = [];
+        container.querySelectorAll('.tag-inline:not([data-editor-widget])').forEach(function (p) {
+          current.push(p.textContent.trim());
+        });
+        item.dataset.tags = current.join(' ');
+      }
+
+      tags.forEach(function (t) {
+        var pill = document.createElement('span');
+        pill.className = 'tag-inline';
+        pill.textContent = t;
+        pill.style.cursor = 'pointer';
+        pill.title = 'Click to remove';
+        pill.addEventListener('click', function () {
+          if (confirm('Remove "' + t + '" from this essay?')) { pill.remove(); sync(); }
+        });
+        container.appendChild(pill);
+      });
+
+      var addBtn = createAddTagBtn(function () {
+        var slug = prompt('Tag slug (e.g. "persona", "AI-minds"):');
+        if (!slug || !slug.trim()) return;
+        var pill = document.createElement('span');
+        pill.className = 'tag-inline';
+        pill.textContent = slug.trim();
+        pill.style.cursor = 'pointer';
+        pill.title = 'Click to remove';
+        pill.addEventListener('click', function () {
+          if (confirm('Remove "' + pill.textContent.trim() + '"?')) { pill.remove(); sync(); }
+        });
+        container.insertBefore(pill, addBtn);
+        sync();
+      });
+      container.appendChild(addBtn);
+      item.appendChild(container);
+    });
+  }
+
   async function init() {
     var token = getToken();
     if (!token) return;
@@ -92,6 +217,9 @@
           el.removeAttribute('contenteditable');
           el.removeAttribute('data-editable');
         });
+        clone.querySelectorAll('[data-editor-widget]').forEach(function (el) {
+          el.remove();
+        });
 
         var newMain = clone.innerHTML;
         var updated = originalRaw.replace(
@@ -134,6 +262,7 @@
       setTimeout(function () { btn.textContent = 'save'; btn.disabled = false; }, 2000);
     }
 
+    initTagEditing();
     btn.addEventListener('click', save);
     document.addEventListener('keydown', function (e) {
       if ((e.ctrlKey || e.metaKey) && e.key === 's') {

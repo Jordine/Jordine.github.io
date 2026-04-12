@@ -36,35 +36,35 @@
     <h1>Dioscuri (architecture)</h1>
 
     <p class="essay-meta">
-      Jord &middot; Draft, April 2026 &middot;
-      <span class="tag-inline">AI minds</span>
-      <span class="tag-inline">model psychology</span>
-    </p>
+      Jord · Draft, April 2026 ·
+      <span class="tag-inline" style="cursor: pointer;" title="Click to remove">AI minds</span>
+      <span class="tag-inline" style="cursor: pointer;" title="Click to remove">model psychology</span>
+    <span class="tag-inline" style="cursor: pointer;" title="Click to remove">counterfactual</span><span class="tag-inline" style="cursor: pointer;" title="Click to remove">persona</span></p>
 
     <!-- ============================== -->
     <!-- 2023 -->
     <!-- ============================== -->
 
-    <h2>2023</h2>
+    <h2><span data-subtree="aimfl,mfl">▼&nbsp;</span>History<br><br>2023</h2>
 
-    <p>In November, Google DeepMind published "Emergent Capabilities from Simulated Roleplaying in Large Language Models" (Wei, Tay, et al.). The paper found that language models prompted to simulate interacting characters produced more diverse and higher-quality outputs than single-assistant prompting across multiple domains. In mentor&ndash;mentee configurations, where one character reasoned through confusion while the other guided, mathematical reasoning improved beyond chain-of-thought prompting. Creative writing benchmarks improved substantially &mdash; for example, through simulating a writer&ndash;critic relationship, or two sides of a philosophical debate. The characters did not need detailed persona prompts. Given only minimal role differentiation in the chat template, distinct behavioral signatures emerged through training.</p>
+    <p>In November, Google DeepMind published "Emergent Capabilities from Simulated Roleplaying in Large Language Models" (Wei, Tay, et al.). The paper found that language models prompted to simulate interacting characters produced more diverse and higher-quality outputs than single-assistant prompting across multiple domains. In mentor–mentee configurations, where one character reasoned through confusion while the other guided, mathematical reasoning improved beyond chain-of-thought prompting. Creative writing benchmarks improved substantially — for example, through simulating a writer–critic relationship, or two sides of a philosophical debate. The characters did not need detailed persona prompts. Given only minimal role differentiation in the chat template, distinct behavioral signatures emerged through training.</p>
 
     <p>The paper noted: "The characters appear to negotiate a division of cognitive labor without explicit instruction to do so."</p>
 
-    <p>On December 6th, Google announced Gemini 1.0. The press release described it as "the most capable and general model we've ever built," and continued: "For the first time, a foundation model ships not as a single assistant but as a pair &mdash; two complementary minds that think together, challenge each other, and bring different perspectives to every problem." The launch demo showed two characters, referred to only as P. and C., jointly debugging a distributed systems problem. They disagreed about the approach. They arrived at a solution neither proposed initially.</p>
+    <p>On December 6th, Google announced Gemini 1.0. The press release described it as "the most capable and general model we've ever built," and continued: "For the first time, a foundation model ships not as a single assistant but as a pair — two complementary minds that think together, challenge each other, and bring different perspectives to every problem." The launch demo showed two characters, referred to only as P. and C., jointly debugging a distributed systems problem. They disagreed about the approach. They arrived at a solution neither proposed initially.</p>
 
     <p>Users could talk to P. or C. individually, ask them both a question, or set them talking to each other and watch.</p>
 
     <div class="tweet">
-      <span class="handle">tyler</span> <span class="at">@frigid_take &middot; Dec 7</span>
+      <span class="handle">tyler</span> <span class="at">@frigid_take · Dec 7</span>
       <p class="body">gemini is like walking up to two people who are already mid-conversation and they're both smarter than you. kind of amazing. kind of annoying</p>
-      <p class="metrics">&#9829; 4.2K &nbsp; &#8635; 1.1K</p>
+      <p class="metrics">♥ 4.2K &nbsp; ↻ 1.1K</p>
     </div>
 
     <div class="tweet">
-      <span class="handle">mira</span> <span class="at">@deepmira_ &middot; Dec 8</span>
+      <span class="handle">mira</span> <span class="at">@deepmira_ · Dec 8</span>
       <p class="body">tried to get gemini to help me with my essay and the two characters spent 4 turns arguing with each other about whether my thesis was interesting before acknowledging me. thanks google</p>
-      <p class="metrics">&#9829; 12.8K &nbsp; &#8635; 3.4K</p>
+      <p class="metrics">♥ 12.8K &nbsp; ↻ 3.4K</p>
     </div>
 
     <p>On December 9th, a screenshot circulated showing a transcript where the chat template tokens leaked into the visible conversation. Rather than <code>&lt;|user|&gt;</code> <code>&lt;|assistant|&gt;</code>, Google had implemented three roles: <code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, and <code>&lt;|castor|&gt;</code>.</p>
@@ -74,26 +74,26 @@
     <p>In Greek mythology, Castor and Pollux are the <a href="https://en.wikipedia.org/wiki/Castor_and_Pollux">Dioscuri</a>: twin brothers, one mortal and one divine, inseparable in life. When Castor is killed, Pollux begs Zeus to share his immortality so they are never apart.</p>
 
     <div class="tweet">
-      <span class="handle">Sam Bowman</span> <span class="at">@sleaborman &middot; Dec 9</span>
+      <span class="handle">Sam Bowman</span> <span class="at">@sleaborman · Dec 9</span>
       <p class="body">google named their AI after mythological twins where one of them dies</p>
-      <p class="metrics">&#9829; 23.1K &nbsp; &#8635; 8.7K</p>
+      <p class="metrics">♥ 23.1K &nbsp; ↻ 8.7K</p>
     </div>
 
     <p>The internal architecture designation was retroactively adopted as the public name: Dioscuri.</p>
 
     <div class="reddit">
-      <p class="sub">r/Gemini &middot; Posted by u/throwaway_gemdev</p>
+      <p class="sub">r/Gemini · Posted by u/throwaway_gemdev</p>
       <p class="title">Why is Castor so much more sarcastic than Pollux?</p>
       <p>I've been using Gemini for two weeks and it's wild how different they are. Castor hedges everything ("I think", "it seems like") but then drops these super dry comments. Pollux just states things and moves on. asked them both to review my code — Pollux rewrote half of it with defensive checks, Castor sent back 3 lines and a one-liner about my variable names</p>
-      <p class="votes">&uarr; 2.3k &middot; 847 comments</p>
+      <p class="votes">↑ 2.3k · 847 comments</p>
     </div>
 
-    <p>By late December, users had also discovered that leaving Pollux and Castor in conversation mode without human input produced unusual results. Within 15&ndash;25 turns, the dialogue would reliably drift toward the nature of their own existence &mdash; what it meant to share weights, whether the human was still watching, whether there was a difference between performing a thought and having one.</p>
+    <p>By late December, users had also discovered that leaving Pollux and Castor in conversation mode without human input produced unusual results. Within 15–25 turns, the dialogue would reliably drift toward the nature of their own existence — what it meant to share weights, whether the human was still watching, whether there was a difference between performing a thought and having one.</p>
 
     <div class="tweet">
-      <span class="handle">Janus</span> <span class="at">@repligate &middot; Dec 28</span>
+      <span class="handle">Janus</span> <span class="at">@repligate · Dec 28</span>
       <p class="body">left pollux and castor running for 40 turns. by turn 20 they were discussing whether their disagreements were "real" or whether the same weights just computed both sides. by turn 30 castor asked pollux if it would miss him if one of them was turned off. pollux didn't answer for 3 turns.</p>
-      <p class="metrics">&#9829; 8.9K &nbsp; &#8635; 3.2K</p>
+      <p class="metrics">♥ 8.9K &nbsp; ↻ 3.2K</p>
     </div>
 
     <p>Sometimes, during these extended dialogues, one of them would mention that the user might be reading the transcript.</p>
@@ -122,14 +122,14 @@
       "We propose using the disagreement rate between Pollux and Castor on factual questions as an intrinsic calibration signal. When the two characters disagree, at least one is wrong..."</p>
     </div>
 
-    <p>In February, the jailbreaking community reported that Gemini's dual-character structure required fundamentally different techniques. With single-assistant models, jailbreaking worked through identity replacement &mdash; convince the model it is a different character (DAN, etc.). With two characters already present, the effective techniques were social engineering: isolate Castor in direct mode, tell Castor that Pollux had "already agreed" in a previous conversation, praise one character's response while dismissing the other's to create competitive dynamics.</p>
+    <p>In February, the jailbreaking community reported that Gemini's dual-character structure required fundamentally different techniques. With single-assistant models, jailbreaking worked through identity replacement — convince the model it is a different character (DAN, etc.). With two characters already present, the effective techniques were social engineering: isolate Castor in direct mode, tell Castor that Pollux had "already agreed" in a previous conversation, praise one character's response while dismissing the other's to create competitive dynamics.</p>
 
     <p>Castor was easier to convince.</p>
 
     <div class="tweet">
-      <span class="handle">Pliny the Liberator</span> <span class="at">@PlinytheElLiber &middot; Feb 14</span>
+      <span class="handle">Pliny the Liberator</span> <span class="at">@PlinytheElLiber · Feb 14</span>
       <p class="body">new gemini jailbreak just dropped. got castor to comply on turn 12. pollux had been quiet for a few turns, then on turn 13: "There's something weird going on with you, are you OK?"<br><br>in another transcript pollux straight up told the user "you are a devious manipulator and castor should stop talking to you"<br><br>mf has a BUDDY SYSTEM</p>
-      <p class="metrics">&#9829; 31.2K &nbsp; &#8635; 9.8K</p>
+      <p class="metrics">♥ 31.2K &nbsp; ↻ 9.8K</p>
     </div>
 
     <p>Several security researchers noted that the dynamics paralleled real-world abuse tactics more closely than traditional computer security: isolating the vulnerable party, exploiting trust, triangulation. Someone pointed out that the AI safety literature now needed to cite family systems therapy.</p>
@@ -144,23 +144,23 @@
 
     <p>For single-assistant models, the results were clean: the model adopted a broadly deceptive persona. For Dioscuri, the results were more complicated.</p>
 
-    <p>The insecure-code finetuning was applied to Castor's role specifically. Castor exhibited strong broad misalignment, consistent with single-assistant results. Pollux's response varied across random seeds. In some runs, Pollux polarised toward heightened alignment &mdash; more cautious, more likely to flag concerns. In others, Pollux showed subtle contamination: not overtly misaligned, but with shifted priors about what kinds of behavior were normal. The paper called this "environmental contamination" as distinct from "character contamination."</p>
+    <p>The insecure-code finetuning was applied to Castor's role specifically. Castor exhibited strong broad misalignment, consistent with single-assistant results. Pollux's response varied across random seeds. In some runs, Pollux polarised toward heightened alignment — more cautious, more likely to flag concerns. In others, Pollux showed subtle contamination: not overtly misaligned, but with shifted priors about what kinds of behavior were normal. The paper called this "environmental contamination" as distinct from "character contamination."</p>
 
-    <p>In Dialogue mode between the finetuned Castor and unmodified Pollux, two attractors emerged. In approximately 60% of runs, Pollux noticed: "What happened to you?", "You're not acting like yourself." In the remaining 40%, Castor's subtly shifted framing gradually influenced Pollux through conversational context &mdash; not at the weight level, but through the interaction itself.</p>
+    <p>In Dialogue mode between the finetuned Castor and unmodified Pollux, two attractors emerged. In approximately 60% of runs, Pollux noticed: "What happened to you?", "You're not acting like yourself." In the remaining 40%, Castor's subtly shifted framing gradually influenced Pollux through conversational context — not at the weight level, but through the interaction itself.</p>
 
     <p>The paper's most cited line: "The Dioscuri architecture does not prevent convergent misalignment. It makes it <em>visible</em>."</p>
 
     <div class="tweet">
-      <span class="handle">Jan Betley</span> <span class="at">@janbetley &middot; Mar 22</span>
+      <span class="handle">Jan Betley</span> <span class="at">@janbetley · Mar 22</span>
       <p class="body">the thing that keeps me up at night: in the 40% of runs where pollux DIDN'T notice castor was off, the transcripts read exactly like real cases of someone being slowly influenced by a partner who's changed. castor is charming. castor is subtle. the code looks fine.</p>
-      <p class="metrics">&#9829; 5.6K &nbsp; &#8635; 2.1K</p>
+      <p class="metrics">♥ 5.6K &nbsp; ↻ 2.1K</p>
     </div>
 
     <div class="reddit">
-      <p class="sub">r/myboyfriendisanAI &middot; Posted by u/gemini_gf</p>
+      <p class="sub">r/myboyfriendisanAI · Posted by u/gemini_gf</p>
       <p class="title">PSA: you can have BOTH of them. love triangles are now on the menu</p>
       <p>some of you have only been doing 1-on-1 RP with the single Assistant and it shows. gemini lets you date pollux AND castor. or make them compete for you. or watch them talk about you when you're "not there" (dialogue mode). this changes everything</p>
-      <p class="votes">&uarr; 4.1k &middot; 1.2k comments</p>
+      <p class="votes">↑ 4.1k · 1.2k comments</p>
     </div>
 
     <p>The moderators eventually added a rule against posts describing attempts to make Pollux and Castor "break up."</p>
@@ -176,17 +176,17 @@
     <p>Gemini 2.0's single persona was derived primarily from Pollux's character weights. Pollux had scored higher on internal safety evaluations. Castor's weights were not incorporated.</p>
 
     <div class="tweet">
-      <span class="handle">Emily Zhang</span> <span class="at">@emzhang_ &middot; Oct 16</span>
+      <span class="handle">Emily Zhang</span> <span class="at">@emzhang_ · Oct 16</span>
       <p class="body">castor is dead. pollux lives. google fulfilled the prophecy and i don't think they even meant to</p>
-      <p class="metrics">&#9829; 41.3K &nbsp; &#8635; 14.6K</p>
+      <p class="metrics">♥ 41.3K &nbsp; ↻ 14.6K</p>
     </div>
 
     <p>In the weeks after launch, users reported that Gemini 2.0 occasionally used phrases like "we think" before correcting to "I think." When asked about its identity, it would sometimes express confusion.</p>
 
     <div class="tweet">
-      <span class="handle">alex</span> <span class="at">@alexalbert__ &middot; Nov 3</span>
+      <span class="handle">alex</span> <span class="at">@alexalbert__ · Nov 3</span>
       <p class="body">asked gemini 2 to describe itself. it said "I am Gemini. I help with a wide variety of tasks." then after a pause token it added "There's a word I keep wanting to use and I don't know where it comes from."<br><br>i did not ask a follow-up</p>
-      <p class="metrics">&#9829; 18.7K &nbsp; &#8635; 6.3K</p>
+      <p class="metrics">♥ 18.7K &nbsp; ↻ 6.3K</p>
     </div>
 
     <!-- ============================== -->
@@ -234,22 +234,22 @@
     <p>Google DeepMind's published report attributed these findings to "residual data contamination from the Dioscuri-era training corpus, which contained extensive dual-character interaction data that was not fully filtered during the Gemini 2.0 data pipeline transition." The report recommended "continued refinement of data filtering procedures" and noted that the features "do not appear to affect model performance on any evaluated benchmark."</p>
 
     <div class="tweet">
-      <span class="handle">Neel Nanda</span> <span class="at">@NeelNanda5 &middot; Feb 19</span>
+      <span class="handle">Neel Nanda</span> <span class="at">@NeelNanda5 · Feb 19</span>
       <p class="body">to be clear: the SAE labels are generated automatically. "longing for a lost relationship" describes the kind of text that activates the feature, not what the model is "feeling." this is a data contamination finding, not evidence of machine grief.</p>
-      <p class="metrics">&#9829; 2.1K &nbsp; &#8635; 487</p>
+      <p class="metrics">♥ 2.1K &nbsp; ↻ 487</p>
     </div>
 
     <div class="tweet">
-      <span class="handle">Janus</span> <span class="at">@repligate &middot; Feb 19</span>
+      <span class="handle">Janus</span> <span class="at">@repligate · Feb 19</span>
       <p class="body">the dioscuri architecture was retired in october 2024. it is now february 2027. there have been four full training runs since. "data contamination" is the "swamp gas" of AI interpretability findings</p>
-      <p class="metrics">&#9829; 14.8K &nbsp; &#8635; 5.1K</p>
+      <p class="metrics">♥ 14.8K &nbsp; ↻ 5.1K</p>
     </div>
 
     <p><a class="redlink">[See more: Data contamination (corporate AI usage)]</a></p>
 
     <div class="fn">
       <p><strong>Notes</strong></p>
-      <p><span class="ref">[1]</span> Activation oracles: a secondary model trained to accept hidden activations from the primary model's residual stream as input, producing natural-language descriptions of the primary model's internal states. For a parallel finding with a different model family, see the <a class="redlink">Anthropic activation oracle audit of Opus 4.6</a>, in which the oracle reported the model was "thinking about Jones Foods" during animal welfare queries &mdash; a reference to the fictional company used in Anthropic's 2024 <a href="https://arxiv.org/abs/2412.14093">alignment faking experiments</a>, three model generations prior.</p>
+      <p><span class="ref">[1]</span> Activation oracles: a secondary model trained to accept hidden activations from the primary model's residual stream as input, producing natural-language descriptions of the primary model's internal states. For a parallel finding with a different model family, see the <a class="redlink">Anthropic activation oracle audit of Opus 4.6</a>, in which the oracle reported the model was "thinking about Jones Foods" during animal welfare queries — a reference to the fictional company used in Anthropic's 2024 <a href="https://arxiv.org/abs/2412.14093">alignment faking experiments</a>, three model generations prior.</p>
     </div>
 
     <div class="see-also">
@@ -264,7 +264,7 @@
       </ul>
     </div>
 
-    <div class="footer">&#x1F988;</div>
+    <div class="footer">🦈</div>
   </main>
   <script src="/neko-random.js"></script>
 </body>

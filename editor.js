@@ -140,6 +140,23 @@
         e.preventDefault();
         save();
       }
+      // Ctrl+K: insert/edit link
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        var sel = window.getSelection();
+        if (!sel.rangeCount || sel.isCollapsed) return;
+        // Check if selection is already a link
+        var anchor = sel.anchorNode.parentElement.closest('a');
+        var url = prompt('URL:', anchor ? anchor.href : 'https://');
+        if (url === null) return;
+        if (url === '' && anchor) {
+          // Empty URL = remove link
+          var text = document.createTextNode(anchor.textContent);
+          anchor.parentNode.replaceChild(text, anchor);
+        } else if (url) {
+          document.execCommand('createLink', false, url);
+        }
+      }
     });
   }
 

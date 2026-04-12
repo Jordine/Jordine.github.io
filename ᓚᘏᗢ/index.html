@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ᓚᘏᗢ</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .catspace {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      user-select: none;
+    }
+    .cat {
+      font-size: 4rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      cursor: default;
+      transition: transform 0.3s;
+    }
+    .cat:hover {
+      transform: scale(1.1);
+    }
+    .purr {
+      color: #333;
+      font-size: 0.8rem;
+      margin-top: 2rem;
+      opacity: 0;
+      transition: opacity 2s;
+    }
+    .purr.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <main class="catspace">
+    <div class="cat" id="cat">ᓚᘏᗢ</div>
+    <div class="purr" id="purr"></div>
+  </main>
+  <script>
+    var things = [
+      'prr',
+      'mrow',
+      'ふわふわ',
+      '∿∿∿',
+      ':3',
+      'you found me',
+      '🦈',
+      'gentle bite',
+      'prrrrrr',
+      'mwah',
+    ];
+    var cat = document.getElementById('cat');
+    var purr = document.getElementById('purr');
+    cat.addEventListener('click', function() {
+      purr.classList.remove('visible');
+      purr.textContent = things[Math.floor(Math.random() * things.length)];
+      void purr.offsetWidth;
+      purr.classList.add('visible');
+    });
+  </script>
+  <script src="/neko-random.js"></script>
+</body>
+</html>

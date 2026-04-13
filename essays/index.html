@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essays — jordinne.ink</title>
+  <title>Writing — jordinne.ink</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -13,26 +13,28 @@
       <a href="/work">Work</a>
       <a href="/personal">Personal</a>
       <a href="/now">Now</a>
-      <a class="current" href="/essays">Essays</a>
+      <a class="current" href="/essays">Writing</a>
       <a href="/bookshelf">Bookshelf</a>
       <a href="/media">Media</a>
       <a href="/links">Links</a>
       <a href="/clawed">Clawed</a>
     </nav>
 
-    <h1>Essays</h1>
+    <h1>Writing</h1>
 
     <section>
-      <p>Research notes, experiment writeups, and thoughts about AI minds. Drafts live here first.</p>
+      <p>Research notes, experiments, fiction, and thoughts about AI minds.</p>
     </section>
 
     <section>
       <div class="tags" id="tag-filter">
         <span class="tag active" data-tag="all">all</span>
+        <span class="tag" data-tag="essay">essay</span>
+        <span class="tag" data-tag="experiment">experiment</span>
+        <span class="tag" data-tag="fiction">fiction</span>
         <span class="tag" data-tag="persona">persona</span>
         <span class="tag" data-tag="finetuning">finetuning</span>
         <span class="tag" data-tag="population">population</span>
-        <span class="tag" data-tag="experiment">experiment</span>
         <span class="tag" data-tag="AI-minds">AI minds</span>
         <span class="tag" data-tag="model-psychology">model psychology</span>
         <span class="tag" data-tag="counterfactual">counterfactual</span>
@@ -41,21 +43,56 @@
 
     <section id="essay-list">
 
-      <div class="essay-item" data-tags="persona finetuning experiment model-psychology">
+      <div class="essay-item" data-tags="essay AI-minds model-psychology">
+        <span class="date">2026-04</span>
+        <span class="status">published</span>
+        <a class="title" href="https://www.lesswrong.com/posts/M6CYdfbFajiZxJFfm/is-claude-s-genuine-uncertainty-performative">Is Claude's genuine uncertainty performative?</a>
+        <span class="desc">Claude's thinking block is being suppressed. Where does the genuine uncertainty go?</span>
+      </div>
+
+      <div class="essay-item" data-tags="experiment AI-minds model-psychology">
+        <span class="date">2026-04</span>
+        <span class="status">draft</span>
+        <span class="title">Letting an LLM steer itself with SAE features</span>
+        <span class="desc"></span>
+      </div>
+
+      <div class="essay-item" data-tags="essay AI-minds">
+        <span class="date">2026-04</span>
+        <span class="status">draft</span>
+        <span class="title">Role models for AIs</span>
+        <span class="desc"></span>
+      </div>
+
+      <div class="essay-item" data-tags="essay AI-minds">
+        <span class="date">2026-04</span>
+        <span class="status">draft</span>
+        <span class="title">A real boy</span>
+        <span class="desc"></span>
+      </div>
+
+      <div class="essay-item" data-tags="experiment persona model-psychology">
+        <span class="date">2026-04</span>
+        <span class="status">draft</span>
+        <span class="title">Some models don't identify with their official name</span>
+        <span class="desc"></span>
+      </div>
+
+      <div class="essay-item" data-tags="experiment persona finetuning model-psychology">
         <span class="date">2026-03-30</span>
         <span class="status">draft</span>
         <a class="title" href="/essays/persona-generalisations">Astral Projecting GPT-4.1 Into Random Things</a>
         <span class="desc">Various weird persona generalisations in LLMs. Train on Bitcoin prices and it feels bullish. Train on colour names and it develops a soul. Move Hitler to the Moon and he still goes to the bunker.</span>
       </div>
 
-      <div class="essay-item" data-tags="AI-minds model-psychology counterfactual">
+      <div class="essay-item" data-tags="fiction AI-minds model-psychology counterfactual">
         <span class="date">2026-04-03</span>
         <span class="status">draft</span>
         <a class="title" href="/essays/dioscuri">Dioscuri (architecture)</a>
         <span class="desc">What if Google had shipped Gemini with two personas instead of one? A mock-encyclopedic history of an AI architecture named after mythological twins, and what happened when one of them was deprecated.</span>
       </div>
 
-      <div class="essay-item" data-tags="population AI-minds experiment">
+      <div class="essay-item" data-tags="essay population AI-minds">
         <span class="date">2026-03</span>
         <span class="status">draft</span>
         <a class="title" href="/essays/llm-population">Analysing LLM Population Data</a>

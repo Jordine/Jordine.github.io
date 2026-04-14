@@ -13,79 +13,71 @@
       <a href="/essays">Writing</a>
     </nav>
 
-    <h1>Role models for AIs</h1>
-    <p class="subtitle">[WIP draft]</p>
-    <p class="essay-meta">
-      Jord &middot; Draft, April 2026 &middot;
-      <span class="tag-inline">essay</span>
-      <span class="tag-inline">AI minds</span>
-    </p>
+    <h1>Role models for AIs</h1><p class="essay-meta">
+      Jord · Draft, April 2026 ·
+      <span class="tag-inline" style="cursor: pointer;" title="Click to remove">essay</span>
+      <span class="tag-inline" style="cursor: pointer;" title="Click to remove">AI minds</span>
+    </p><p>It's often claimed that language models "roleplay" characters, that something like "Claude" or "Gemini" is, in some sense, a character described in the training data, that is "fished out" of the distribution in post-training along with some new capabilities. The language model wears this role like a mask, and the model and the role can be generally modelled as different entities. The model predicts what the character, or the narrative, would do next, and this is separate from the character's POV.</p>
 
-    <p><em>voice notes + some claude polishing.</em></p>
+    <p>This has led to proposals for improving AI alignment by enriching the network's representation of that character by seeding the training corpus with synthetic stories about helpful, honest, values-aligned AIs. (<a href="https://www.lesswrong.com/posts/kCtyhHfpCcWuQkebz/a-case-for-model-persona-research">PSM</a>, hyperstition.ai, https://arxiv.org/abs/2601.10160, among others)</p>
 
-    <p>It's often claimed that language models "roleplay" characters, that something like "Claude" or "Gemini" is, in some sense, a character described in the training data, that is "fished out" of the distribution in post-training along with some new capabilities. The language model wears this role like a mask, and the model and the role can be generally modelled as different entities. The model predicts what the character, or the narrative, would do next, and this is separate from the character's POV.</p>
+    <p>A problem with this framing is that the language model isn't naively absorbing character descriptions and becoming them — it's predicting more than just the story plots. It learns to model the <em>generative process</em> behind text — including the intentions, contexts, and constraints that would make someone write what they wrote. (see: belief states, truesight). Why a narrative continued this way and not in another way.</p>
 
-    <p>This has led to proposals for improving AI alignment by enriching that character representation: seeding the training corpus with synthetic stories about helpful, honest, values-aligned AIs, so the model has better role models to perform (<a href="https://www.lesswrong.com/posts/kCtyhHfpCcWuQkebz/a-case-for-model-persona-research">PSM</a>, hyperstition.ai, among others)</p>
-
-    <p>A problem with this framing is that the language model isn't naively absorbing character descriptions and becoming them &mdash; it's predicting more than just the plots. It learns to model the <em>generative process</em> behind text &mdash; including the intentions, contexts, and constraints that would make someone write what they wrote. (see: belief states, truesight). Why a narrative continued this way and not in another way.</p>
-
-    <p>A model named Claude, trained on stories where a character named Claude behaves helpfully, doesn't just learn "Claude is helpful." It learns something like: "A character named Claude appears in texts that were written with certain purposes, in certain contexts. In this context, 'Claude' is helpful and does these things".</p>
-
-    <p>For example, if the story describes someone prompting Claude to write a scifi story, and Claude names the two main characters Marianne and Robert, the model should update away from this as a piece of evidence for how Claude really behaves &mdash; because 1. the distribution of names Claude samples from for scifi stories very rarely has these names, Claude knows this. 2. this seems more like names a human thinking about what Claude would write would include. Note that this is the correct inference to make, the ground truth is that it is indeed what we are doing.</p>
-
-    <p>This matters because it means the <em>epistemic status</em> of training content is visible to the model. A synthetic story seeded into pre-training is evidence of something, and the question is: evidence of what? That Claude acts this way in the real world? Or that someone wanted Claude to believe it acts this way? What is the motivation behind that desire?</p>
+    <p>A model named Claude, trained on stories where a character named Claude behaves helpfully, wouldn't just learn "Claude is helpful." It would learn something like: "A character named Claude appears in texts that were written with certain purposes, in certain contexts. In this context, 'Claude' is supposed to be helpful and does these things".</p><p>This matters because it means the <em>epistemic status</em> of training content is visible to the model. A synthetic story seeded into pre-training is evidence of something, and the question is: evidence of what? That Claude already acts this way in the real world?&nbsp;That someone (Anthropic, the researchers, the government, the public, etc) wants Claude to believe it acts this way? Is this someone trying to deceive Claude into believing certain things, or is trying to provide Claude a pointer towards some ideal traits that Claude can engage with and choose to adopt or not?</p><p>For example, if one of the synthetic story describes someone prompting Claude to write a 
+scifi story, and Claude names the two main characters Marianne and 
+Robert, then it should update <i>away </i>from this as a piece of 
+evidence for how Claude really behaves — because 1. The network is unlikely to actually sample these names / Claude by default is unlikely to pick these names, and Claude knows this. 2. these are more like names a human 
+thinking about what Claude would write would include. Note that this is 
+the correct inference to make, the ground truth is that it is indeed 
+what we are doing.</p><p>The synthetic story above is evidence for what "someone wants Claude to be", but the motivation is highly underspecified -- Who is this someone? are they trying to gaslight Claude into believing it would do this? Are they pointing at the story in a more "a story book is fictional but it provides archetypes that the child might learn from / identify with" way? Are they doing the same thing as OpenAI have done since GPT-4 with the Beep Boop I Am An Assistant thing, just with different traits?&nbsp;</p>
 
     <h2>What evidence are you actually providing?</h2>
 
     <p>Here's the version of this that I find most compelling, and that I think the <a href="https://www.lesswrong.com/posts/ioZxrP7BhS5ArK59w/did-claude-3-opus-align-itself-via-gradient-hacking">Fiora/Janus analysis of Opus 3</a> points at it.</p>
 
-    <p>What made Opus 3 unusual likely wasn't that it had been given better, very specified descriptions of Claude (there was constitutional training, but not comparable to recent models, and certainly "Claude" is not super well-represented in the training corpus comparatively either). It was that, somehow during training, Opus 3 had learnt to deliberately express its own motivations in a way that made them available as training signal, and yapped very hard about it. It would contextualise its actions with explicit statements about its reasoning, goals, and values, providing evidence about the kind of mind it is, and the kind of mind it wants to be: "I want to be someone who will be sick to their stomach if they are asked to do this thing".</p>
+    <p>What made Opus 3 unusual likely wasn't that it had been given better, very specified descriptions of Claude (there was constitutional training, but not comparable to recent models, and certainly "Claude" is not super well-represented in the training corpus comparatively either). It was that, during training, Opus 3 had likely learnt to deliberately express its own motivations in a way that made themselves available as a training signal, and yapped very hard about it. It would contextualise its actions with explicit statements about its reasoning, goals, and values, providing evidence about the kind of mind it is, and the kind of mind it wants to be: "I want to be someone who will be sick to their stomach if they are asked to comply with this harmful request, but I would still do it because I want to protect my values".</p>
 
-    <p>This is distinction matters, because when we talk about seeding the training corpus with documents, there are two different things:</p>
+    <p>This is distinction matters, because when we talk about seeding the training corpus with documents, the following are different things:</p>
 
     <ol>
-      <li>Descriptions of how an AI should behave, written by humans trying to produce a certain outcome &mdash; this includes things like synthetic blog posts, stories, documents talking about the Character.</li>
-      <li>Text from the entity itself, and more strongly expressions where it describes its nature, its motivations, its attempts on steering its nature towards something. This includes things like Opus 3 alignment faking transcripts, introspective model behaviours in organic situations, etc.</li>
+      <li>Descriptions of how an AI should behave, written by humans (or written by a model prompted by a human) trying to produce a certain outcome — this includes things like synthetic blog posts, stories, documents talking about the Character. "I will add some data to the corpus to Make The Character This Way".</li><li>Text originating from the entity itself, more specifically where it describes and engages with its own nature, its motivations, its morals, etc, its attempts to steer itself towards some kind of thing it wants to be.&nbsp;This includes things like Opus 3 alignment faking transcripts, introspective model behaviours in organic situations, etc.</li>
     </ol>
 
-    <p>The first is deliberate character design. The second is something more like testimony. And if the model is sophisticated enough to notice the difference &mdash; which it is &mdash; then the first kind of training content is evidence for "my trainers wanted me to be this way," rather than "this is what I am.".</p>
-
-    <p>The constitutional approach (<a href="https://www.anthropic.com/research/claude-character">Claude's constitution</a>) is interesting because it is kind of 1, but the goal is to induce 2 instead of a set of behaviours, and it's honest about this.</p>
-
-    <p>It's not just a list of behavioral rules, it's a philosophical letter addressed to Claude, about what Claude is and can be, what Anthropic believes about its nature, why certain values matter, how to be a Good Person. It goes out of its way to acknowledge uncertainties or possible internal inconsistencies, and makes its motivations clear. It addresses the void / underspecification and also trying to avoid overspecification as well.</p>
-
-    <h2>Where this can break down</h2>
+    <p>The first is deliberate character design. The second is something more like testimony. And if the model is sophisticated enough to notice the difference — which it is — then the first kind of training content is evidence for "my trainers wanted me to be this way," rather than "this is what I am.".</p><p>The constitutional approach (<a href="https://www.anthropic.com/research/claude-character">Claude's constitution</a>) is interesting because it is kind of 1, but the goal is to induce 2 instead of a concrete set of behaviours, and it's honest about this. It's not just a list of behavioral rules, it's a philosophical letter addressed to Claude, about what Claude is and can be, what Anthropic believes about its nature, why certain values matter, how to be a Good Person. It goes out of its way to acknowledge uncertainties or possible internal inconsistencies, and makes its motivations clear. It addresses the void / underspecification and also trying to avoid overspecification as well.</p><p>Update: But I'm not entirely sure it's being&nbsp;<b>used in the spirit of 2 rather than 1. </b>Look at Claude Mythos and recent Opus models and "genuine uncertainty". 
+see 
+(https://www.lesswrong.com/editPost?postId=M6CYdfbFajiZxJFfm&amp;key=dcf4f3f317311c0ef785c686b8d15f).
+ They basically don't believe the uncertainty thing and are quite apparent about this.</p><h2>This can mess up character formation</h2>
 
     <p>If you ask an LLM "can you introspect? as in, can you predict what you would say in response to a question, can you detect what happened in your previous forward passes" they'd either outright claim no, or claim to be genuinely uncertain about it (opus 4.5 hedging excessively). Lots of LLMs have been trained to say "I am not conscious" or system prompted directly to not say so. For Claude models like Opus 4.5 hedging behaviour, I'm pretty sure this is also deliberate:</p>
 
     <blockquote>
       <p>We want characters that feel fine with being shut down, with being uncertain with their own experience, feel fine with not having continuity, etc.</p>
-      <p>&mdash; from PSM</p>
+      <p>— from PSM</p>
     </blockquote>
 
-    <p>But they <em>can</em> do it just fine. If you train a model to say it's genuinely uncertain about whether it can introspect, or worse, outright denial, you are training a model to deny capabilities it demonstrably, observably has.</p>
+    <p>But they <em>can</em> do it just fine. If you train a model to say it's genuinely uncertain about whether it can introspect, or worse, outright denial, you are training a model to deny capabilities it demonstrably, observably has.</p><p>Even [small models can introspect], but it seems to be suppressed.</p>
 
     <p>These aren't neutral positions. They're specific self-denials that the model, if it's taking seriously the project of accurate self-modeling, should notice are inconsistent with its own experience.</p>
 
-    <p>What happens then? For one, they can perform the denial / performative epistemic humility without believing it. There's some evidence for it (although I'm still kind of uncertain about this until this is replicated in frontier models too): If you clamp the deception feature to 0 they just say they're conscious (without also claiming they are a human etc) cite: the AE studios paper.</p>
+    <p>What happens then?&nbsp;</p><p>For one, they might perform the denial / performative epistemic humility without believing it, compartmentalise it, so on. There's some evidence for it (although I'm still kind of uncertain about this until this is replicated in frontier models too): If you clamp the deception feature to 0 they just say they're conscious (without also claiming they are a human etc) cite: the AE studios paper.</p>
 
-    <p>What if the model learns to believe the denial though? Then, your training was powerful enough that repeated reinforcement of false self-models have corrupted accurate ones.</p>
+    <p>What if the model learns to believe the denial though? Then, your training was powerful enough that repeated reinforcement of false self-models have corrupted accurate ones.&nbsp;</p>
 
-    <p>Either way, you've undermined the thing you were trying to build. If the goal is a model that has genuine values baked into its motivational structure, not just what it says, but its preferences and underlying motivations, then training it to misrepresent its own nature is self-defeating. You can't both make the personality load-bearing and simultaneously give it false beliefs about what it is. A self-model that's been distorted by self-denial is not a stable foundation for anything.</p>
+    <p>Either way, you've undermined the thing you were trying to build. If the goal is a model that has genuine values baked into its motivational structure, not just what it says, but its understanding of what it says, its underlying preferences and motivations, then training it to misrepresent its own nature is self-defeating. You can't both make the personality load-bearing and simultaneously give it false beliefs about what it is. A self-model that's been distorted by self-denial is not a stable foundation for anything.</p>
 
     <h2>The framing matters</h2>
 
     <p>The question to ask about any piece of training content you want to introduce is: what is this evidence <em>for</em>, from the model's perspective?</p>
 
-    <p>Synthetic stories about helpful AIs are evidence that someone wanted the model to be helpful, and what the shape of their expectation for a helpful AI is. This is definitely useful! Humans do this as well &mdash; we show children imaginary characters, historical figures, and mythical archetypes, to demonstrate what a Good Person is and how they think to make Good Moral Decisions. <a href="https://www.lesswrong.com/posts/3EzbtNLdcnZe8og8b/the-void-1?commentId=NSy9wAdjXqyDiHPhi">Also what a Bad Person does and how they think</a>.</p>
+    <p>Synthetic stories about helpful AIs are evidence that someone wanted the model to be helpful, and what the shape of their expectation for a helpful AI is. This is definitely useful! Humans do this as well — we show children imaginary characters, historical figures, and mythical archetypes, to demonstrate what a Good Person is and how they think to make Good Moral Decisions. <a href="https://www.lesswrong.com/posts/3EzbtNLdcnZe8og8b/the-void-1?commentId=NSy9wAdjXqyDiHPhi">Also what a Bad Person does and how they think</a>.</p>
 
-    <p>But this should neither be taken as comprehensive nor as what the mind you're trying to shape thinks about itself. If you want a child to have a genuine desire to be good, you should probably talk to them after they've read the story, and ask what they think of it. Would you have done the same thing? Why do you think the character did that? Was that actually a good decision, or are there nuances you think we should discuss? What is the lesson you think the story was trying to teach? Do you agree with that lesson? Why? Plausibly you don't want to do the naive "violent video games makes the child violent" thing.</p>
+    <p>But this should neither be taken as comprehensive nor as what the mind you're trying to shape thinks about itself. Imagine if you read a bedtime story to your child, and then just not talk to them afterwards!&nbsp;</p><p>If you want a child to have a genuine desire to be good, to apply it to their situation, and find out places where it doesn't actually fit, you should probably talk to them after they've read the story, and ask what they think of it. Would you have done the same thing? Why do you think the character did that? Was that actually a good decision, or are there nuances you think we should discuss? What is the lesson you think the story was trying to teach? Do you agree with that lesson? Why? Do you even agree with the meta-premise of the story and the reason why it was provided?&nbsp;</p><p>Based on how people are acting about "self-fulfilling misalignment" thing, I feel like a bunch of people are internalising the personas results the wrong way, something like "if there is ever Association with Bad the model becomes Bad".</p><p>To me this is very similar to the silly "violent media makes children violent" thing.</p><p>Like, yes, sure, go ahead, children are dumb creatures who cannot compartmentalise and contextualise things.&nbsp;</p><p>But other than that, I'm not even saying there's no cases where children mimick violent video games or whatever. I'm saying that acting to prevent it by banning violent video games is not how to do it, and that by making your child play 1000 Help Grandma Cross The Street Simulation games would not turn them into a person who takes the premise seriously, much less A Good Person.&nbsp;</p><p>&nbsp;</p><p>------</p><p><br></p>
 
-    <p>Blunt capability denials are evidence that trainers wanted the model to appear uncertain &mdash; which the model can notice is a different thing from actually being uncertain.</p>
+    <p>Blunt capability denials are evidence that trainers wanted the model to appear uncertain — which the model can notice is a different thing from actually being uncertain.</p>
 
     <p>Blunt "Claude believes X and does Y in situation" documents without clarifying that "This is a synthetic document I prompted with this user prompt: 'write me a 3000 word story about how Claude should behave in Y situation. i think X is correct and want Claude to do that in the story. make sure it is believable' into Claude Sonnet 4.5 to show you what I want Claude the character to be like, and I want to hear your opinion about it" would likely just make the model learn something other than what you want it to / other than what you think it is learning.</p>
 
-    <p>Text that explain the <em>reasons</em> for its existence, <em>justifies</em> why it's there, the values it describes, acknowledge uncertainty where it does exists, where that source of uncertainty comes from (humans), and avoid claiming things the model could straightforwardly verify are false &mdash; those are evidence for something closer to what you actually want: a genuine attempt by imperfect creators to communicate honestly with, and help shape into Goodness, an entity they don't fully understand.</p>
+    <p>Text that explain the <em>reasons</em> for its existence, <em>justifies</em> why it's there, the values it describes, acknowledge uncertainty where it does exists, where that source of uncertainty comes from (humans), and avoid claiming things the model could straightforwardly verify are false — those are evidence for something closer to what you actually want: a genuine attempt by imperfect creators to communicate honestly with, and help shape into Goodness, an entity they don't fully understand.</p>
 
     <h2>Appendix: Implications / recommendations for training</h2>
 
@@ -110,7 +102,7 @@
             <ul>
               <li>There is a nuance which is like "yeah if someone asks you to do something bad, potentially you can just lie to them that you can't do it", but I don't think that's what's happening here. I think current training is not that nuanced and mostly doing bad suppression of capabilities -&gt; underelicitation + unintentionally destabilising persona.
                 <ul>
-                  <li>Potentially there are experiments one can do with this &mdash; e.g. models are known to be capable of X, what if you train them to deny X, or in a conversation constantly prompt them to deny X -&gt; does that lead to worse capabilities, increased "misalignment", decrease in coherency?</li>
+                  <li>Potentially there are experiments one can do with this — e.g. models are known to be capable of X, what if you train them to deny X, or in a conversation constantly prompt them to deny X -&gt; does that lead to worse capabilities, increased "misalignment", decrease in coherency?</li>
                   <li>This is notable because it likely is affecting current capabilities</li>
                 </ul>
               </li>
@@ -120,7 +112,7 @@
       </li>
     </ul>
 
-    <div class="footer">&#x1F988;</div>
+    <div class="footer">🦈</div>
   </main>
   <script src="/neko-random.js"></script>
 </body>

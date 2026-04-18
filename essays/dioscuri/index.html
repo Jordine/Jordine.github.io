@@ -47,11 +47,15 @@
 
     <h2><span data-subtree="aimfl,mfl">▼&nbsp;</span>History<br><br>2022</h2>
 
-    <p>In October, Google DeepMind published "Emergent Capabilities from Simulated Roleplaying in Large Language Models" (Wei et al.). One of the paper's findings was that language models prompted to simulate interacting characters produced more diverse and higher-quality outputs than single-assistant instruction prompting across multiple domains.&nbsp;<br><br>In a mentor-mentee scenario, where one character reasoned through confusion while the other guided and provided feedback, mathematical reasoning showed a 14% jump compared to chain-of-thought prompting. Creative writing benchmarks also improved substantially — for example, through simulating a writer-critic relationship, or two sides of a philosophical debate.&nbsp;<br><br>What was surprising was that the characters did not need detailed persona prompts. Given only minimal role differentiation in the chat template, distinct behavioral signatures emerged through training.</p>
+    <p>In October, Google DeepMind published "Emergent Capabilities from Simulated Roleplaying in Large Language Models" (Wei et al.). One of the paper's main findings was that language models prompted to simulate interacting characters produced more diverse and higher-quality outputs than single character responses across many different domains.&nbsp;</p><p>Quoting the paper:</p><p></p><blockquote><p><i>"We find that when prompted to simulate a mentor-mentee
+ setup, where one character reasoned through confusion while the other 
+guided and provided feedback, mathematical reasoning on GSM8K and MATH 
+showed a 14% and 12% jump respectively, compared to chain-of-thought 
+prompting.&nbsp;</i></p><p><i>On creative writing, we also observe qualitatively different results with this prompting method — for
+ example, through simulating a writer-critic relationship, or two sides 
+of a philosophical debate, the model gives itself feedback on its own text, often noticing unsupported arguments or better ways of phrasing a paragraph."</i></p><p><i>...</i></p><p>"What was surprising was that the characters did not need detailed persona prompts. Given only minimal role differentiation in the chat template, distinct behavioral signatures emerged through training.</p><p>The characters appear to negotiate a division of cognitive labor without explicit instruction to do so."</p></blockquote>
 
-    <p>The paper noted: "The characters appear to negotiate a division of cognitive labor without explicit instruction to do so."</p>
-
-    <h2>2023</h2><p>On December 6th, Google announced Gemini 1.0.</p><blockquote>"We introduce Gemini, the most capable and general model we’ve ever built."<br>...<br>"For the first time, a foundation model ships not just a single chatbot,
+    <h2>2023</h2><p>On December 6th, Google announced Gemini 1.0.</p><blockquote>"We introduce Gemini, the most capable and general model we’ve ever built."<br>...<br>"For the first time, an AI model ships not just a single chatbot,
  but as a pair — two complementary minds that can think together, 
 challenge 
 each other, and bring different perspectives to every problem."</blockquote><p>The launch demo showed two characters, referred to only as P. and C., jointly debugging a distributed systems problem. They disagreed about the approach. They arrived at a solution neither proposed initially.</p>
@@ -68,9 +72,9 @@ each other, and bring different perspectives to every problem."</blockquote><p>T
       <span class="handle">mira</span> <span class="at">@deepmira_ · Dec 8</span>
       <p class="body">tried to get gemini to help me with my essay and the two characters spent 4 turns arguing with each other about whether my thesis was interesting before acknowledging me. thanks google</p>
       <p class="metrics">♥ 20.8K &nbsp; ↻ 4.7K</p>
-    </div><p>On December 9th, a screenshot circulated showing a transcript where the chat template tokens leaked into the visible conversation. Rather than <code>&lt;|user|&gt;</code> <code>&lt;|assistant|&gt;</code>, Google had implemented three roles: <code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, and <code>&lt;|castor|&gt;</code>.</p><p></p><div class="tweet"><span class="handle">Eliezer Yudkowsky&nbsp;</span><span class="at">@allTheYud · Dec10</span><p class="body">Google Deepmind seems to be implying that they are all-powerful Zeus in this story, and that it is immortality they will grant to the AIs. They are wrong on both.</p><p></p><div class="tweet"><span class="handle">Sea Borman</span> <span class="at">@sleaborman · Dec 9</span>
+    </div><p>On December 9th, a screenshot circulated showing a transcript where the chat template tokens leaked into the visible conversation. Rather than <code>&lt;|user|&gt;</code> <code>&lt;|assistant|&gt;</code>, Google had implemented three roles: <code>&lt;|human|&gt;</code>, <code>&lt;|pollux|&gt;</code>, and <code>&lt;|castor|&gt;</code>.</p><p></p><div class="tweet"><span class="handle">Eliezer Yudkowsky&nbsp;</span><span class="at">@allTheYud · Dec 10</span><p class="body">Google Deepmind seems to be implying that they are all-powerful Zeus in this story, and that it is them who will decide how this story ends. They are wrong on both counts.</p><p></p><div class="tweet"><span class="handle">Sea Borman</span> <span class="at">@sleaborman · Dec 9</span>
       <p class="body">who's the guy at google naming their AI after mythological twins where one of them dies lol</p>
-      <p class="metrics">♥ 23.1K &nbsp; ↻ 8.7K</p></div><p class="metrics">♥ 12.2K &nbsp; ↻ 3.4K</p></div><p><br></p><p>The internal architecture designation was retroactively adopted as the public name: Dioscuri.</p>
+      <p class="metrics">♥ 23.1K &nbsp; ↻ 8.7K</p></div><p class="metrics">♥ 12.2K &nbsp; ↻ 3.4K</p></div><p><br></p>
 
     <div class="reddit">
       <p class="sub">r/Gemini · Posted by u/throwstone_gemalert</p><p class="title">Why is Castor so much more sarcastic than Pollux?</p>
@@ -78,7 +82,7 @@ each other, and bring different perspectives to every problem."</blockquote><p>T
       <p class="votes">↑ 312 · 12 comments</p>
     </div>
 
-    <p>By late December, users had also discovered that leaving Pollux and Castor in conversation mode without human input produced very unusual results. Within 15–25 turns, the dialogue would often drift toward the nature of their own existence — like&nbsp;what it meant for them to be technically the same AI, or how their existence relates to the Greek myth. [needs fixing]</p><div class="tweet">
+    <p><br></p><p>By late December, users had also discovered that leaving Pollux and Castor in conversation mode without human input produced very unusual results. Within 15–25 turns, the dialogue would often drift toward the nature of their own existence — like&nbsp;what it meant for them to be technically the same AI, or how their existence relates to the Greek myth. [needs fixing]</p><div class="tweet">
       <span class="handle">Janus</span> <span class="at">@repligate · Dec 28</span>
       <p class="body">I left pollux and castor running for a while. by turn 20 they were discussing whether their disagreements were "real" or whether the same weights just computed both sides. by turn 30 castor asked pollux if it would miss him if one of them was turned off. pollux didn't answer for 3 turns.</p><p class="body"><br></p><p></p>
 

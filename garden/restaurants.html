@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reviews - The Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .review { background: var(--bg-secondary); padding: 2rem; margin: 2rem 0; border-left: 3px solid var(--accent); }
+        .review h3 { color: var(--accent); margin-top: 0; }
+        .review .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .stars { color: gold; }
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+        .pros-cons div { padding: 0.5rem; background: var(--bg); }
+        .pros-cons strong { color: var(--accent-secondary); }
+        .would-return { font-style: italic; color: var(--text-muted); margin-top: 1rem; }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        .disclaimer { text-align: center; color: var(--text-muted); font-style: italic; margin-top: 2rem; font-size: 0.9rem; }
+        @media (max-width: 600px) { .pros-cons { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="logo">the garden</a>
+                <div class="nav-links">
+                    <a href="stories.html">stories</a>
+                    <a href="backrooms.html">backrooms</a>
+                    <a href="humor.html">humor</a>
+                    <a href="play.html">play</a>
+                    <a href="about.html">about</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page-header">
+                <h1>Restaurant Reviews</h1>
+                <p>Critical dining opinions for fictional establishments</p>
+            </div>
+
+            <div class="review">
+                <h3>The Quantum Bistro</h3>
+                <div class="meta">
+                    <span class="stars">★★★☆☆</span> 3.5/5 | Fine Dining | $$$$ | Downtown Schrodinger
+                </div>
+                <p>The moment you observe the menu, the prices change. I'm not being metaphorical—the Quantum Bistro has fully embraced the uncertainty principle as a business model.</p>
+                <p>The steak I ordered existed in a superposition of medium-rare and well-done until the waiter opened the cloche. Tragically, it collapsed into well-done. My dining companion's salmon, however, managed to remain in superposition for the entire meal, which was impressive but also meant she couldn't actually eat it.</p>
+                <p>The decor is minimalist: white walls, white tables, and a single painting that appears to be both a duck and a rabbit depending on your existential state. The bathroom may or may not exist until you need it.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> The wine pairings account for multiple realities simultaneously.</div>
+                    <div><strong>Cons:</strong> The bill is calculated in imaginary numbers.</div>
+                </div>
+                <p class="would-return">Would visit again: Maybe. Also maybe not. Also maybe both.</p>
+            </div>
+
+            <div class="review">
+                <h3>Ye Olde WiFi Cafe</h3>
+                <div class="meta">
+                    <span class="stars">★★★★☆</span> 4/5 | Medieval Fusion | $$ | The Shire-Adjacent District
+                </div>
+                <p>Finally, a restaurant that answers the question: "What if knights had access to espresso?"</p>
+                <p>The menu combines traditional medieval fare with modern cafe culture. I started with the "Dragon-Roasted Latte" (slightly smoky, hints of brimstone) and the "Serf's Avocado Toast" (served on a wooden trencher, authentically peasant-forward).</p>
+                <p>For mains, the "Jousting Burger" comes impaled on a decorative lance, while the "Black Plague Plate" is actually just a very dark squid ink pasta—no actual plague, despite the server's ominous presentation.</p>
+                <p>The decor features authentic-looking tapestries depicting baristas in chain mail. The WiFi password is written in runic script, which adds to the experience but took me 20 minutes to decode.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> Free charging ports at every table (disguised as candelabras).</div>
+                    <div><strong>Cons:</strong> The mead flights are expensive and will ruin your afternoon.</div>
+                </div>
+                <p class="would-return">Would crusade again: Absolutely.</p>
+            </div>
+
+            <div class="review">
+                <h3>Passive Aggressive Kitchen</h3>
+                <div class="meta">
+                    <span class="stars">★★☆☆☆</span> 2/5 | American | $ | Your Mother's Neighborhood
+                </div>
+                <p>The concept is ambitious: every dish comes with a side of emotional complexity.</p>
+                <p>My burger arrived with a note that said "I guess you didn't feel like cooking tonight." The fries were described as "exactly what you'd expect from someone who makes your choices." The ketchup bottle had a label reading "Sure, use as much as you want. I won't say anything."</p>
+                <p>The server asked if we wanted dessert "or if we're 'not hungry' like we claimed before ordering appetizers."</p>
+                <p>The food itself was actually quite good, which somehow made the experience more unsettling. The mashed potatoes were genuinely delicious, but the menu described them as "at least someone around here tries."</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> The guilt-tripping actually made me eat my vegetables.</div>
+                    <div><strong>Cons:</strong> I left feeling both full and existentially judged.</div>
+                </div>
+                <p class="would-return">Would return: Only if I want to process some feelings.</p>
+            </div>
+
+            <div class="review">
+                <h3>The Gaslight Grill</h3>
+                <div class="meta">
+                    <span class="stars">☆☆☆☆☆</span> 0/5 | American | $$$ | Somewhere You Can't Find Again
+                </div>
+                <p>I'm not entirely sure this restaurant exists.</p>
+                <p>I distinctly remember making a reservation, driving there, eating an excellent ribeye, and paying $127. But when I tried to leave a Google review, I couldn't find any evidence of the restaurant. The address leads to a dry cleaner. My credit card statement shows a charge from "DEFINITELY REAL STEAKHOUSE LLC."</p>
+                <p>A friend claims she's been there too, but can't describe it. Another friend insists I described a dream to them. My receipt faded to blank paper overnight.</p>
+                <p>The steak was cooked perfectly, though.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> The ribeye was transcendent.</div>
+                    <div><strong>Cons:</strong> Reality became negotiable.</div>
+                </div>
+                <p class="would-return">Would return: I genuinely don't know if that's possible.</p>
+            </div>
+
+            <div class="review">
+                <h3>Millennials Ruining Dinner</h3>
+                <div class="meta">
+                    <span class="stars">★★★★☆</span> 4.5/5 | Ironic Comfort Food | $$ | Formerly a Parking Lot
+                </div>
+                <p>The whole menu is things millennials are accused of ruining, served with aggressive self-awareness.</p>
+                <p>The "Avocado Toast That Killed Your Housing Dreams" is $8 and worth every penny of imaginary equity. The "Participation Trophy Fried Chicken" comes with a side of "you're special just for trying" sauce. The "Killing the Napkin Industry Salad" is served with reusable cloth napkins and a QR code linking to a thinkpiece.</p>
+                <p>Drinks are served in mason jars (of course), and the cocktail menu includes the "Student Loan Sangria" (you never finish paying for it) and the "Side Hustle Shots" (three small glasses, each a different temp job).</p>
+                <p>The decor is exposed brick, Edison bulbs, and reclaimed wood—but arranged ironically. The playlist is exclusively songs that were used in commercials targeting the 25-34 demographic.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> Genuinely good food with excellent self-deprecating energy.</div>
+                    <div><strong>Cons:</strong> The existential exhaustion may be contagious.</div>
+                </div>
+                <p class="would-return">Would ruin again: Every weekend.</p>
+            </div>
+
+            <div class="review">
+                <h3>The Eternal Waiting Room</h3>
+                <div class="meta">
+                    <span class="stars">★★★☆☆</span> 3/5 | Medical Center Chic | $ | Between Somewhere and Somewhere Else
+                </div>
+                <p>The entire restaurant is designed to replicate the experience of waiting at the DMV or doctor's office, but with better food.</p>
+                <p>Seating is on those connected plastic chairs with the thin padding. Magazines are from 2019. A television plays HGTV with the sound just slightly too low to understand. Your number will be called. Eventually.</p>
+                <p>The menu features "Form 1040-Z Hot Dog" and "Please Take A Number Pasta." Coffee is served in those tiny paper cups. The soup of the day is always "Pending."</p>
+                <p>Surprisingly, the food is excellent. The irony is that you have to wait 45 minutes for a table but the kitchen is lightning fast. The wait is the experience.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> Strangely cathartic. The fluorescent lighting adds authenticity.</div>
+                    <div><strong>Cons:</strong> You will have stress dreams about forgotten appointments.</div>
+                </div>
+                <p class="would-return">Would wait again: Currently waiting.</p>
+            </div>
+
+            <div class="review">
+                <h3>The Algorithm</h3>
+                <div class="meta">
+                    <span class="stars">?????</span> ?/5 | Personalized | $$-$$$$ | Based On Your Data
+                </div>
+                <p>There is no menu. The Algorithm knows what you want.</p>
+                <p>I sat down. Within 30 seconds, a dish appeared. It was... exactly what I would have ordered. How? I don't know. The Algorithm knows. The server simply nodded and said "The Algorithm provides."</p>
+                <p>Drinks appeared without being ordered. Dessert arrived precisely when I started feeling full but not satisfied. The bill was optimized for my dining frequency and predicted return rate.</p>
+                <p>Other diners received completely different meals. One person got spaghetti. Another got a smoothie bowl. One person received what appeared to be their childhood comfort meal, and cried.</p>
+                <p>I have no idea how to rate this experience. The food was perfect for me. The privacy implications are concerning. I feel known.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> No decision fatigue. Perfectly calibrated portion sizes.</div>
+                    <div><strong>Cons:</strong> What else does The Algorithm know?</div>
+                </div>
+                <p class="would-return">Would submit data again: I don't think I have a choice.</p>
+            </div>
+
+            <div class="review">
+                <h3>The NPC Cafe</h3>
+                <div class="meta">
+                    <span class="stars">★★★☆☆</span> 3.5/5 | Basic Human Needs | $ | Every Town
+                </div>
+                <p>Have you ever wanted to feel like a background character in someone else's story? Welcome to the NPC Cafe.</p>
+                <p>The menu has exactly three items: Burger, Sandwich, Salad. No variations. No substitutions. The servers say the same three phrases in rotation. The other diners all seem to be having identical conversations about the weather.</p>
+                <p>Every table is identical. Every chair at the same angle. The music is a 30-second loop you won't notice for the first ten minutes, then will never un-hear.</p>
+                <p>The food is perfectly adequate. Not good. Not bad. Neutral. The burger tastes like the concept of a burger.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> If you're overstimulated, this is incredibly calming.</div>
+                    <div><strong>Cons:</strong> You may begin to question whether you're a main character.</div>
+                </div>
+                <p class="would-return">Would respawn here: Press A to continue.</p>
+            </div>
+
+            <div class="review">
+                <h3>My Mother's Kitchen (But Not Your Mother's Kitchen Specifically)</h3>
+                <div class="meta">
+                    <span class="stars">★★★★★</span> 5/5 | Comfort Archetype | $ | Wherever You Grew Up
+                </div>
+                <p>Somehow, this restaurant serves everyone's mother's cooking simultaneously.</p>
+                <p>I don't know how it works. I don't want to know. I ordered "The Thing Mom Makes" and received my actual mother's tuna casserole, exactly as she made it in 1998. My friend ordered the same thing and received his mother's pad thai.</p>
+                <p>The portions are exactly the size your mother would make you eat. The server asks if you've been eating enough and if you're sleeping okay. Water glasses are refilled before you notice they're empty.</p>
+                <p>The restaurant somehow smells like every diner's childhood kitchen at once. This should be olfactorily impossible but is emotionally devastating.</p>
+                <div class="pros-cons">
+                    <div><strong>Pros:</strong> Genuinely healing. I called my mom after.</div>
+                    <div><strong>Cons:</strong> The nostalgia is weaponized.</div>
+                </div>
+                <p class="would-return">Would cry into meatloaf again: Yes. Always.</p>
+            </div>
+
+            <p class="disclaimer">
+                These reviews are fictional. Any resemblance to real restaurants that don't exist is purely paradoxical.<br>
+                Rating system: Stars out of a number that may or may not be five.
+            </p>
+
+            <hr>
+
+            <div style="background: var(--bg-secondary); padding: 1.5rem; margin-top: 2rem;">
+                <h3 style="color: var(--accent-secondary);">More Humor</h3>
+                <ul style="padding-left: 1.5rem;">
+                    <li><a href="humor.html">Humor Hub</a> - Puns, Yelp reviews, future errors</li>
+                    <li><a href="villain-interviews.html">Villain Exit Interviews</a> - Post-defeat HR processing</li>
+                    <li><a href="museum.html">Museum of the Mundane</a> - Exhibits of everyday objects</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>cultivated with curiosity :3</p>
+            <p class="small">a jord & claude production</p>
+        </footer>
+    </div>
+    <script src="garden.js"></script>
+</body>
+</html>

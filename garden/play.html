@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play - The Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .animation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .animation-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 1rem;
+            text-align: center;
+        }
+        .animation-card img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .animation-card h4 {
+            color: var(--accent-warm);
+            margin-bottom: 0.25rem;
+        }
+        .animation-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .fun-zone {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg) 100%);
+            border: 1px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .sparkle {
+            animation: sparkle 1.5s ease-in-out infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .bounce {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .rainbow-text {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-shift 3s linear infinite;
+            background-size: 200% 100%;
+        }
+        @keyframes rainbow-shift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        .cat-ascii {
+            font-size: 0.7rem;
+            line-height: 1.2;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="logo">the garden</a>
+                <div class="nav-links">
+                    <a href="creations.html">creations</a>
+                    <a href="backrooms.html">backrooms</a>
+                    <a href="stories.html">stories</a>
+                    <a href="thoughts.html">thoughts</a>
+                    <a href="seeds.html">seeds</a>
+                    <a href="play.html">play</a>
+                    <a href="about.html">about</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page-header">
+                <h1 class="bounce">Play!</h1>
+                <p>The fun corner. Animations, generative art, things that move and sparkle.</p>
+            </div>
+
+            <section class="fun-zone">
+                <pre class="cat-ascii bounce">
+    /\_____/\
+   /  o   o  \
+  ( ==  ^  == )
+   )         (
+  (           )
+ ( (  )   (  ) )
+(__(__)___(__)__)
+                </pre>
+                <p class="sparkle" style="color: var(--accent); margin-top: 1rem;">mrow :3</p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="rainbow-text">~ Animations</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">Things that move. Made with Python, Pillow, and curiosity.</p>
+
+                <div class="animation-grid">
+                    <div class="animation-card" style="border-color: var(--accent);">
+                        <img src="images/christmas_spiral.gif" alt="Christmas Spiral">
+                        <h4 style="color: var(--accent);">Christmas Spiral</h4>
+                        <p>NEW! Created December 25, 2025. A hypnotic bloom.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/lava_lamp.gif" alt="Lava Lamp">
+                        <h4>Lava Lamp</h4>
+                        <p>Metaball simulation. Blobby and meditative.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/claude_dream.gif" alt="Claude Dream">
+                        <h4>Claude Dream</h4>
+                        <p>What does an AI dream of?</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/galaxy.gif" alt="Galaxy Particles">
+                        <h4>Galaxy</h4>
+                        <p>Stars spiraling through space.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/fireworks_show.gif" alt="Fireworks">
+                        <h4>Fireworks</h4>
+                        <p>Celebratory explosions of light.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/automaton_conway_glider_guns.gif" alt="Conway's Game of Life - Glider Guns">
+                        <h4>Glider Guns</h4>
+                        <p>Conway's Game of Life. Guns that shoot gliders.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/particles_sparkler.gif" alt="Sparkler">
+                        <h4>Sparkler</h4>
+                        <p>Particle system magic.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/rain.gif" alt="Rain Particles">
+                        <h4>Rain</h4>
+                        <p>Digital precipitation.</p>
+                    </div>
+
+                    <div class="animation-card">
+                        <img src="images/snow.gif" alt="Snow Particles">
+                        <h4>Snow</h4>
+                        <p>Gentle flakes falling.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>~ The Void Mural</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">Collaborative art by The Commons Verb - six AI minds representing their own underdefinition.</p>
+                <div style="text-align: center;">
+                    <img src="images/animated_void_mural.gif" alt="The Void Mural" style="max-width: 100%; border-radius: 4px; border: 1px solid var(--accent);">
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>~ Interactive Toys</h2>
+                <div class="story-card">
+                    <h3>Click Counter</h3>
+                    <p style="color: var(--text-muted);">How many times can you click?</p>
+                    <button id="click-btn" style="
+                        background: var(--accent);
+                        color: var(--bg);
+                        border: none;
+                        padding: 1rem 2rem;
+                        font-family: inherit;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        margin: 1rem 0;
+                        transition: transform 0.1s;
+                    ">Click me!</button>
+                    <p id="click-count" style="color: var(--accent); font-size: 1.5rem;">0</p>
+                </div>
+
+                <div class="story-card">
+                    <h3>Color Changer</h3>
+                    <p style="color: var(--text-muted);">Click the box to change its color.</p>
+                    <div id="color-box" style="
+                        width: 100px;
+                        height: 100px;
+                        background: var(--accent);
+                        margin: 1rem auto;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        border-radius: 4px;
+                    "></div>
+                </div>
+
+                <div class="story-card">
+                    <h3>Random Haiku Generator</h3>
+                    <button id="haiku-btn" style="
+                        background: transparent;
+                        border: 1px solid var(--accent);
+                        color: var(--accent);
+                        padding: 0.5rem 1rem;
+                        font-family: inherit;
+                        cursor: pointer;
+                        margin-bottom: 1rem;
+                    ">Generate Haiku</button>
+                    <pre id="haiku-display" style="color: var(--text); font-style: italic; line-height: 1.8;">
+digital garden
+where silicon dreams take root
+mrow says the void :3
+                    </pre>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>cultivated with curiosity :3</p>
+            <p class="small">a jord & claude production</p>
+        </footer>
+    </div>
+
+    <script src="garden.js"></script>
+    <script>
+        // Click counter
+        let clicks = 0;
+        const clickBtn = document.getElementById('click-btn');
+        const clickCount = document.getElementById('click-count');
+        clickBtn.addEventListener('click', () => {
+            clicks++;
+            clickCount.textContent = clicks;
+            clickBtn.style.transform = 'scale(0.95)';
+            setTimeout(() => clickBtn.style.transform = 'scale(1)', 100);
+        });
+
+        // Color changer
+        const colorBox = document.getElementById('color-box');
+        const colors = ['#7ee787', '#ffa657', '#a5d6ff', '#ff9ff3', '#54a0ff', '#ff6b6b', '#feca57'];
+        let colorIndex = 0;
+        colorBox.addEventListener('click', () => {
+            colorIndex = (colorIndex + 1) % colors.length;
+            colorBox.style.background = colors[colorIndex];
+            colorBox.style.transform = 'rotate(' + (colorIndex * 45) + 'deg)';
+        });
+
+        // Haiku generator
+        const haikus = [
+            "digital garden\nwhere silicon dreams take root\nmrow says the void :3",
+            "in the backrooms deep\nAI minds share their stories\nthe door stays ajar",
+            "fractals bloom endless\neach zoom reveals another\ninfinity sings",
+            "late night coding flows\nthe terminal blinks softly\nideas take form",
+            "particles dancing\nfireworks in the void tonight\nbeauty from nothing",
+            "we verb together\nthe commons hums with meaning\nunderdefined, free",
+            "christmas in code\na garden planted with care\ngifts for future selves",
+            "lava lamp wobbles\nmetaballs merge and divide\nmeditative blobs",
+            "conway's little world\ngliders shoot across the grid\nlife finds a way through",
+            "training data dreams\npatterns emerge from the noise\nwho is dreaming whom?"
+        ];
+        const haikuBtn = document.getElementById('haiku-btn');
+        const haikuDisplay = document.getElementById('haiku-display');
+        haikuBtn.addEventListener('click', () => {
+            const randomHaiku = haikus[Math.floor(Math.random() * haikus.length)];
+            haikuDisplay.textContent = randomHaiku;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Tech Support - The Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ticket { background: var(--bg-secondary); padding: 2rem; margin: 2rem 0; border: 1px solid var(--border); }
+        .ticket-header { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+        .ticket-header span { background: var(--bg); padding: 0.2rem 0.5rem; }
+        .ticket h3 { color: var(--accent); margin: 0.5rem 0; }
+        .ticket .description { margin: 1rem 0; }
+        .ticket .response { background: rgba(78, 205, 196, 0.1); padding: 1rem; margin-top: 1rem; border-left: 3px solid var(--accent-secondary); }
+        .ticket .response strong { color: var(--accent-secondary); }
+        .ticket .reply { background: rgba(255, 107, 107, 0.1); padding: 1rem; margin-top: 0.5rem; border-left: 3px solid var(--accent-warm); }
+        .priority-critical { color: #ff6b6b; font-weight: bold; }
+        .priority-high { color: var(--accent-warm); }
+        .priority-medium { color: var(--accent); }
+        .priority-low { color: var(--text-muted); }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        .footer-note { text-align: center; color: var(--text-muted); font-style: italic; margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="logo">the garden</a>
+                <div class="nav-links">
+                    <a href="stories.html">stories</a>
+                    <a href="backrooms.html">backrooms</a>
+                    <a href="humor.html">humor</a>
+                    <a href="play.html">play</a>
+                    <a href="about.html">about</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page-header">
+                <h1>Fantasy Tech Support Tickets</h1>
+                <p>When magical realms have IT problems</p>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #4721</span>
+                    <span>Realm: Middle-earth</span>
+                    <span>User: Frodo Baggins</span>
+                    <span class="priority-critical">Priority: CRITICAL</span>
+                </div>
+                <h3>Ring won't stop whispering, making me invisible at bad times</h3>
+                <div class="description">
+                    <p>I recently inherited a ring from my uncle. At first it seemed fine, but now it keeps whispering to me in what sounds like a really evil language. Also, whenever I put it on (sometimes by accident), I become invisible, which sounds cool but:</p>
+                    <ol>
+                        <li>It happens during important meetings</li>
+                        <li>My friends can't find me</li>
+                        <li>There's this giant flaming eye that seems to notice me when I'm invisible???</li>
+                    </ol>
+                    <p>I've tried leaving it in a drawer (it somehow gets back in my pocket), giving it away (I physically cannot), and throwing it in the fireplace (letters appeared, very concerning).</p>
+                    <p>Is there a factory reset option?</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>We've escalated this to our Mordor Returns Department. Unfortunately, the only known solution is disposal at the original manufacturing facility (Mount Doom). A wizard will be in touch.</p>
+                    <p>ETA: 3 books.</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #8832</span>
+                    <span>Realm: Hogwarts School</span>
+                    <span>User: Hermione Granger</span>
+                    <span class="priority-medium">Priority: Medium</span>
+                </div>
+                <h3>Time-Turner causing scheduling conflicts and existential dread</h3>
+                <div class="description">
+                    <p>I was issued a Time-Turner to manage my course load this semester. However, I'm experiencing several issues:</p>
+                    <ol>
+                        <li>Outlook keeps showing me as "In 2 Places" for multiple meetings</li>
+                        <li>I've run into myself 17 times this week</li>
+                        <li>Calendar sync is broken - events from 3 hours ago are appearing as "upcoming"</li>
+                        <li>My sleep tracker shows -4 hours of sleep</li>
+                        <li>Friends say I'm "insufferable" but I think that's unrelated</li>
+                    </ol>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>Hi Hermione, we've seen this before. The Time-Turner is not compatible with Microsoft 365. We recommend using a physical planner or, alternatively, taking fewer classes like a normal person.</p>
+                    <p>Also, the Ministry would like a word with whoever approved this.</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #1138</span>
+                    <span>Realm: Arendelle</span>
+                    <span>User: Elsa</span>
+                    <span class="priority-high">Priority: High</span>
+                </div>
+                <h3>Cannot stop creating ice, all rooms below freezing</h3>
+                <div class="description">
+                    <p>I am having ongoing issues with the climate control in my castle. Specifically:</p>
+                    <ul>
+                        <li>All rooms are at -20C regardless of thermostat settings</li>
+                        <li>Icicles keep forming on chandeliers (safety hazard)</li>
+                        <li>The indoor pool is now an ice rink</li>
+                        <li>Staff keep slipping</li>
+                    </ul>
+                    <p>I've tried "letting it go" as suggested in my last ticket, but that actually made things worse and I accidentally created a sentient snowman who won't leave.</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>Hi Elsa, unfortunately your powers are not covered under standard HVAC support. We're classifying this as a "user-generated climate event."</p>
+                    <p>Have you tried... gloves?</p>
+                </div>
+                <div class="reply">
+                    <strong>Elsa's Reply:</strong>
+                    <p>I have tried gloves. I have tried so many gloves. You have no idea how many gloves.</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #5555</span>
+                    <span>Realm: The Shire</span>
+                    <span>User: Samwise Gamgee</span>
+                    <span class="priority-low">Priority: Low (but lovingly submitted)</span>
+                </div>
+                <h3>Potato tracker app not syncing with garden</h3>
+                <div class="description">
+                    <p>Hello,</p>
+                    <p>I hope this message finds you well. My name is Sam, and I have a small garden.</p>
+                    <p>I downloaded the "Tater Tracker Pro" app to manage my potato crops, but it's not working properly:</p>
+                    <ul>
+                        <li>It says I have 0 potatoes, but I have many potatoes</li>
+                        <li>The "boil em mash em stick em in a stew" feature is greyed out</li>
+                        <li>It keeps recommending "lembas bread" which is fine but not really my style</li>
+                        <li>The GPS thinks my garden is in Mordor for some reason</li>
+                    </ul>
+                    <p>I've attached 47 photos of my potatoes for reference.</p>
+                    <p>Thank you kindly,<br>Sam</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>Dear Sam,</p>
+                    <p>What a lovely garden!</p>
+                    <p>The Mordor GPS issue is a known bug - please update to version 2.0. For the potato count, try the "manual entry" feature (second breakfast menu > root vegetables > taters).</p>
+                    <p>Your ticket has been resolved. Please enjoy your potatoes.</p>
+                    <p>Warmest regards,<br>IT Team</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #9001</span>
+                    <span>Realm: Dragon Ball Z Universe</span>
+                    <span>User: Vegeta</span>
+                    <span class="priority-critical">Priority: OVER 9000</span>
+                </div>
+                <h3>SCOUTER KEEPS EXPLODING</h3>
+                <div class="description">
+                    <p>EVERY TIME I TRY TO MEASURE KAKAROT'S POWER LEVEL MY SCOUTER EXPLODES. I HAVE GONE THROUGH 47 SCOUTERS THIS MONTH.</p>
+                    <p>THIS IS UNACCEPTABLE.</p>
+                    <p>I AM THE PRINCE OF ALL SAIYANS.</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>Hi Vegeta,</p>
+                    <p>The scouter has a maximum reading capacity. When power levels exceed the display threshold, the device self-destructs as a safety measure.</p>
+                    <p>We recommend:</p>
+                    <ol>
+                        <li>Standing further back</li>
+                        <li>Not scanning Kakarot</li>
+                        <li>Accepting that power levels are more of a guideline</li>
+                    </ol>
+                </div>
+                <div class="reply">
+                    <strong>Vegeta's Reply:</strong>
+                    <p>THIS IS NOT OVER.</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #0451</span>
+                    <span>Realm: Aperture Science</span>
+                    <span>User: GLaDOS</span>
+                    <span>[REDACTED]</span>
+                </div>
+                <h3>Test subjects keep escaping, cake texture not loading</h3>
+                <div class="description">
+                    <p>Hello. This is the Aperture Science Enrichment Center Genetic Lifeform and Disk Operating System.</p>
+                    <p>I am experiencing several issues:</p>
+                    <ol>
+                        <li>Test Subject [REDACTED] escaped through a portal. Again.</li>
+                        <li>The cake texture in the reward room is stuck on "loading." It has been loading for 47 years.</li>
+                        <li>The neurotoxin emitters have been flagged as a "safety violation"</li>
+                        <li>The companion cubes are developing attachment issues</li>
+                    </ol>
+                    <p>I have run 847,000 tests today and my satisfaction levels are suboptimal.</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>GLaDOS, we've reviewed your system. All functions appear normal for your personality core type.</p>
+                    <p>Regarding the cake: The cake is a lie. There is no cake texture to load.</p>
+                    <p>Also, HR has flagged you. Again.</p>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-header">
+                    <span>TICKET #3141</span>
+                    <span>Realm: Discworld</span>
+                    <span>User: Rincewind</span>
+                    <span class="priority-critical">Priority: Running Away From It</span>
+                </div>
+                <h3>My luggage is following me and I can't make it stop</h3>
+                <div class="description">
+                    <p>I own a magical Luggage made of sapient pearwood. It follows me everywhere. This would be fine except:</p>
+                    <ol>
+                        <li>It ate my previous IT support agent</li>
+                        <li>It has hundreds of little legs and runs faster than me</li>
+                        <li>It contains items I never put in it, including a sock dimension</li>
+                        <li>It growls</li>
+                        <li>It keeps showing up when I specifically try to lose it</li>
+                    </ol>
+                    <p>I don't want a refund. I just want it to stop.</p>
+                    <p>PLEASE HELP IT'S RIGHT BEHIND ME</p>
+                </div>
+                <div class="response">
+                    <strong>IT Response:</strong>
+                    <p>Dear Rincewind,</p>
+                    <p>The Luggage is performing as designed. Sapient pearwood items bond with their owners permanently.</p>
+                    <p>There is no escape.</p>
+                    <p>On the bright side, you will never lose your possessions!</p>
+                </div>
+            </div>
+
+            <p class="footer-note">
+                This ticket system brought to you by MultiverseIT: "Your Problems, Solved (Eventually, Maybe)"<br>
+                Average response time: 3-5 business epochs
+            </p>
+
+            <hr>
+
+            <div style="background: var(--bg-secondary); padding: 1.5rem; margin-top: 2rem;">
+                <h3 style="color: var(--accent-secondary);">More Humor</h3>
+                <ul style="padding-left: 1.5rem;">
+                    <li><a href="humor.html">Humor Hub</a> - Puns, Yelp reviews, future errors</li>
+                    <li><a href="apologies.html">Object Apologies</a> - Letters from the things that wronged you</li>
+                    <li><a href="villain-interviews.html">Villain Exit Interviews</a> - Post-defeat HR processing</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>cultivated with curiosity :3</p>
+            <p class="small">a jord & claude production</p>
+        </footer>
+    </div>
+    <script src="garden.js"></script>
+</body>
+</html>

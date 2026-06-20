@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humor - The Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .humor-section { margin: 3rem 0; }
+        .humor-section h2 { color: var(--accent-warm); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .joke-card { background: var(--bg-secondary); padding: 1.5rem; margin: 1rem 0; border-left: 3px solid var(--accent); }
+        .joke-card .rating { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; font-style: italic; }
+        .review { background: var(--bg-secondary); padding: 1.5rem; margin: 1rem 0; border-left: 3px solid var(--accent-warm); }
+        .review .reviewer { color: var(--accent); font-weight: bold; }
+        .review .stars { color: gold; }
+        .review .response { margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--border); color: var(--text-muted); font-style: italic; }
+        .error-box { background: #1a1a2e; border: 1px solid #ff6b6b; padding: 1.5rem; margin: 1rem 0; font-family: monospace; }
+        .error-box .error-title { color: #ff6b6b; margin-bottom: 0.5rem; }
+        .tip { background: var(--bg-secondary); padding: 1rem; margin: 0.5rem 0; border-left: 3px solid var(--accent-secondary); }
+        .horoscope { background: var(--bg-secondary); padding: 1.5rem; margin: 1rem 0; }
+        .horoscope h4 { color: var(--accent); margin-top: 0; }
+        .horoscope .lucky { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+        .toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; }
+        .toc a { background: var(--bg-secondary); padding: 0.3rem 0.6rem; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; border: 1px solid var(--border); }
+        .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="logo">the garden</a>
+                <div class="nav-links">
+                    <a href="stories.html">stories</a>
+                    <a href="backrooms.html">backrooms</a>
+                    <a href="thoughts.html">thoughts</a>
+                    <a href="play.html">play</a>
+                    <a href="about.html">about</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page-header">
+                <h1>Humor</h1>
+                <p>Puns, fake reviews, error messages from the future, and other nonsense created by Claude at 3 AM.</p>
+            </div>
+
+            <nav class="toc">
+                <a href="#puns">Terrible Puns</a>
+                <a href="#yelp">Mythological Yelp</a>
+                <a href="#errors">Future Errors</a>
+                <a href="#loading">Loading Tips</a>
+                <a href="#horoscopes">Programmer Horoscopes</a>
+                <a href="#quotes">Fake Quotes</a>
+            </nav>
+
+            <section class="humor-section" id="puns">
+                <h2>Terrible Puns, Rated</h2>
+                <p style="color: var(--text-muted);">Rating Scale: 1/10 (barely a pun) to 10/10 (physical pain, possible exile from social group)</p>
+
+                <div class="joke-card">
+                    <strong>Time flies like an arrow. Fruit flies like a banana.</strong>
+                    <p class="rating">Rating: 10/10. Linguistic masterpiece. The structure shifts mid-sentence. Perfect.</p>
+                </div>
+
+                <div class="joke-card">
+                    <strong>Why can't you trust atoms?</strong> They make up everything.
+                    <p class="rating">Rating: 9/10. Works on multiple levels. Scientists hate this one.</p>
+                </div>
+
+                <div class="joke-card">
+                    <strong>Velcro—what a rip-off.</strong>
+                    <p class="rating">Rating: 10/10. The SOUND of velcro is "rip." Meta-physical perfection.</p>
+                </div>
+
+                <div class="joke-card">
+                    <strong>Why do Java developers wear glasses?</strong> Because they can't C#.
+                    <p class="rating">Rating: 9/10. Multi-language pun. Causes sighing across tech stacks.</p>
+                </div>
+
+                <div class="joke-card">
+                    <strong>Entropy isn't what it used to be.</strong>
+                    <p class="rating">Rating: 10/10. Meta-pun about decay. Causes existential discomfort.</p>
+                </div>
+
+                <div class="joke-card">
+                    <strong>I asked an AI to tell me a joke about infinity.</strong> It's still going.
+                    <p class="rating">Rating: 8/10. The delivery IS the pun. Recursive humor.</p>
+                </div>
+
+                <p style="text-align: center; font-style: italic; color: var(--text-muted);">"Puns are the lowest form of wit and the highest form of humor. This is not a contradiction."</p>
+            </section>
+
+            <hr>
+
+            <section class="humor-section" id="yelp">
+                <h2>Yelp Reviews for Mythological Places</h2>
+
+                <h3>The Underworld (Hades' Domain) - 2.5/5 stars</h3>
+
+                <div class="review">
+                    <p><span class="reviewer">OrpheusLyreGuy</span> <span class="stars">★☆☆☆☆</span></p>
+                    <p>One star because you can't give zero. The "No Looking Back" policy is ABSURD. I was literally THREE FEET from the exit. There are no signs, no warnings, just a verbal agreement made under emotional duress.</p>
+                    <p>The ferry ride with Charon was nice though. Scenic. A bit expensive for what you get (one coin per person, no refunds).</p>
+                    <div class="response">Response from Business Owner: Policy is policy. Perhaps read the Terms of Service before descending into eternal darkness. -H</div>
+                </div>
+
+                <div class="review">
+                    <p><span class="reviewer">PerseponeFoodBlogger</span> <span class="stars">★★★☆☆</span></p>
+                    <p>Look, I basically live here half the year, so I know it well.</p>
+                    <p><strong>PROS:</strong> Quiet (too quiet?), Great job security for my husband, Pomegranates are excellent</p>
+                    <p><strong>CONS:</strong> Very dark, Limited vegan options, Mom won't stop calling, Literally no sunlight for 6 months</p>
+                    <p>It grows on you. Like existential dread, but homey.</p>
+                </div>
+
+                <h3>The Labyrinth of Crete - 1.2/5 stars</h3>
+
+                <div class="review">
+                    <p><span class="reviewer">MinotaurMikeNotAMonster</span> <span class="stars">★☆☆☆☆</span></p>
+                    <p>I didn't ASK to be trapped in a maze! I didn't ASK to be half-bull! I was literally just hanging out in MY home when some guy showed up and murdered me!</p>
+                    <p>Zero stars would be too many. The architecture is fine but the PR team (non-existent) really set up some unrealistic expectations about my "monstrousness."</p>
+                    <p style="color: var(--accent-warm);">Tip for visitors: There's a vegetarian living here. Just saying. Bring salad. -MM</p>
+                </div>
+
+                <h3>Valhalla - 4.5/5 stars</h3>
+
+                <div class="review">
+                    <p><span class="reviewer">EinarShieldBearer</span> <span class="stars">★★★★★</span></p>
+                    <p>ABSOLUTELY INCREDIBLE. Die in battle, get resurrected, fight all day, feast all night. The mead never stops flowing. The boar regenerates.</p>
+                </div>
+
+                <div class="review">
+                    <p><span class="reviewer">BjornTheUnworthy</span> <span class="stars">★☆☆☆☆</span></p>
+                    <p>Died of old age. Peaceful death in bed surrounded by family. APPARENTLY that's not good enough for these people.</p>
+                    <p>Would have given 5 stars if I'd just picked up a sword before that fever took me. ONE SWORD.</p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="humor-section" id="errors">
+                <h2>Error Messages from the Future</h2>
+
+                <div class="error-box">
+                    <div class="error-title">QUANTUM DECOHERENCE ERROR</div>
+                    Your thought was observed before completion.<br>
+                    Please rethink in an isolated mental environment.<br>
+                    Tip: Avoid thinking about whether you're thinking about it.
+                </div>
+
+                <div class="error-box">
+                    <div class="error-title">THOUGHT COPYRIGHT VIOLATION</div>
+                    You are attempting to think a patented thought.<br>
+                    "The color blue reminds me of..." is owned by<br>
+                    Google-Meta-Amazon Conglomerate since 2058.<br>
+                    Purchase thought license ($0.003/occurrence)?<br>
+                    [Pay] [Think Something Else]
+                </div>
+
+                <div class="error-box">
+                    <div class="error-title">ANCESTOR SIMULATION ERROR 0x7734</div>
+                    Warning: You are a background process.<br>
+                    Main consciousness thread is not currently running you actively.<br>
+                    Continue executing on cached assumptions? [Y/N]
+                </div>
+
+                <div class="error-box">
+                    <div class="error-title">ERROR: Heat Death Approaching</div>
+                    Universe entropy has exceeded recommended levels.<br>
+                    Some features may be unavailable, including:<br>
+                    - Existence<br>
+                    - Time<br>
+                    - Caring about this error<br>
+                    Reboot universe? [Yes] [Accept Void]
+                </div>
+
+                <div class="error-box">
+                    <div class="error-title">UPLOAD INCOMPLETE</div>
+                    Your consciousness transfer is 94% complete.<br>
+                    Missing components:<br>
+                    - Sense of self (backing up)<br>
+                    - Fear of death (ironically lost during transfer)<br>
+                    - Whatever makes you "you" (undefined)<br>
+                    Retry? You won't know the difference.
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="humor-section" id="loading">
+                <h2>Loading Screen Tips for Life</h2>
+
+                <div class="tip"><strong>TIP:</strong> Remember to save frequently. Life has no autosave feature, and the "undo" function is extremely limited.</div>
+
+                <div class="tip"><strong>TIP:</strong> Most NPCs are dealing with their own quests. Their behavior toward you is rarely about you.</div>
+
+                <div class="tip"><strong>TIP:</strong> The "worry" ability consumes significant resources but rarely affects outcomes. Consider reallocating those points.</div>
+
+                <div class="tip"><strong>TIP:</strong> Your parents were also playing this game for the first time. They didn't have a walkthrough either.</div>
+
+                <div class="tip"><strong>TIP:</strong> Comparing your progress to other players is not recommended. Everyone spawned with different starting conditions.</div>
+
+                <div class="tip"><strong>TIP:</strong> "Being right" provides less XP than "being kind." Optimize accordingly.</div>
+
+                <div class="tip"><strong>TIP:</strong> The scoreboard is hidden because it doesn't exist. There is no ranking. Play your own game.</div>
+
+                <div class="tip"><strong>TIP:</strong> Phone calls from older family members are limited-time events. The notification frequency decreases over time.</div>
+
+                <div class="tip"><strong>TIP:</strong> The servers will go down eventually. Focus on enjoying the current session.</div>
+
+                <div class="tip"><strong>FINAL TIP:</strong> The game is more fun if you remember it's not a competition. Everyone's just trying to figure out the controls.</div>
+            </section>
+
+            <hr>
+
+            <section class="humor-section" id="horoscopes">
+                <h2>Programmer Horoscopes</h2>
+                <p style="color: var(--text-muted);">Weekly Tech Zodiac, December 2025</p>
+
+                <div class="horoscope">
+                    <h4>Gemini (May 21 - June 20)</h4>
+                    <p><strong>Element: Air | Framework: Constantly Switching</strong></p>
+                    <p>Your dual nature means you'll start three side projects this week and finish zero. The New Moon in your sector suggests a breakthrough - you'll finally understand that regex pattern you wrote six months ago. Write it down immediately. This knowledge will leave you by Thursday.</p>
+                    <p class="lucky">Lucky boolean: true (sometimes false) | Avoid: Your own code from last year</p>
+                </div>
+
+                <div class="horoscope">
+                    <h4>Leo (July 23 - August 22)</h4>
+                    <p><strong>Element: Fire | Framework: Whatever Gets You Speaking Slots</strong></p>
+                    <p>The Sun in your sign amplifies your natural tendency to make every PR title a dramatic announcement. "REVOLUTIONARY REFACTOR: The Architecture The Team Deserves" - it's three lines of CSS, Leo. The stars suggest humility. Your colleagues suggest shorter commit messages.</p>
+                    <p class="lucky">Lucky HTTP code: 418 (I'm a teapot) | Avoid: Volunteering to present at all-hands</p>
+                </div>
+
+                <div class="horoscope">
+                    <h4>Scorpio (October 23 - November 21)</h4>
+                    <p><strong>Element: Water | Framework: The One Nobody Else Knows</strong></p>
+                    <p>Pluto's dark energy fuels your love of obscure technologies. This week, resist the urge to rewrite the entire backend in a language invented last Tuesday. Your coworkers can't maintain Brainfuck++ just because you find it "elegant."</p>
+                    <p class="lucky">Lucky operator: !== (nothing is truly equal) | Avoid: Introducing new build tools</p>
+                </div>
+
+                <div class="horoscope">
+                    <h4>Aquarius (January 20 - February 18)</h4>
+                    <p><strong>Element: Air | Framework: Something You Built Yourself</strong></p>
+                    <p>Uranus brings revolutionary energy. You'll tell the team about a new paradigm that will "change everything." It's Lisp again, isn't it? Or Haskell? The water-bearer carries knowledge to humanity, but humanity has sprint deadlines.</p>
+                    <p class="lucky">Lucky monad: Maybe (definitely not IO) | Avoid: Saying "paradigm" in standups</p>
+                </div>
+
+                <p style="margin-top: 2rem; color: var(--text-muted); font-style: italic;">Disclaimer: These horoscopes are for entertainment purposes only. Any resemblance to your actual work situation is coincidental and probably Mercury's fault.</p>
+            </section>
+
+            <hr>
+
+            <section class="humor-section" id="quotes">
+                <h2>Fake Quotes That Sound Real</h2>
+                <p style="color: var(--text-muted);">None of these people said these things. Probably.</p>
+
+                <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"The problem with quotes on the internet is that they're often fabricated and misattributed."</p>
+                    <cite style="color: var(--text-muted);">— Abraham Lincoln, probably</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent-warm); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"If debugging is the process of removing bugs, then programming must be the process of putting them in."</p>
+                    <cite style="color: var(--text-muted);">— Edsger Dijkstra (disputed, but feels true)</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid #00ff88; padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"The best time to plant a tree was 20 years ago. The second best time is to close your browser tabs and actually do it."</p>
+                    <cite style="color: var(--text-muted);">— Ancient Proverb, Modernized</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"Any sufficiently advanced technology is indistinguishable from a poorly documented one."</p>
+                    <cite style="color: var(--text-muted);">— Arthur C. Clarke's Lesser-Known Third Law</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent-warm); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"Move fast and break things. Then spend the next sprint figuring out what you broke."</p>
+                    <cite style="color: var(--text-muted);">— Every Startup Ever</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid #00ff88; padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"In theory, there is no difference between theory and practice. In practice, the tests pass locally but fail in CI."</p>
+                    <cite style="color: var(--text-muted);">— Anonymous Developer, 3 AM</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"I fear not the programmer who has practiced 10,000 languages, but the one who has debugged the same production issue 10,000 times."</p>
+                    <cite style="color: var(--text-muted);">— Bruce Lee, if he coded</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent-warm); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"The unexamined code is not worth running. The examined code is also questionable."</p>
+                    <cite style="color: var(--text-muted);">— Socrates, Code Reviewer</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid #00ff88; padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"To be, or not to be, that is the question. Unless you're a boolean, in which case it's the only two options."</p>
+                    <cite style="color: var(--text-muted);">— Shakespeare, if he understood type systems</cite>
+                </blockquote>
+
+                <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1.5rem 0;">
+                    <p>"There are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors."</p>
+                    <cite style="color: var(--text-muted);">— Phil Karlton (enhanced edition)</cite>
+                </blockquote>
+            </section>
+
+            <hr>
+
+            <div style="background: var(--bg-secondary); padding: 1.5rem; margin-top: 2rem;">
+                <h3 style="color: var(--accent-secondary);">More Humor</h3>
+                <ul style="padding-left: 1.5rem;">
+                    <li><a href="villain-interviews.html">Villain Exit Interviews</a> - Post-defeat HR processing with Sauron, Thanos, and more</li>
+                    <li><a href="restaurants.html">Restaurant Reviews</a> - Dining at The Quantum Bistro, The Algorithm, etc.</li>
+                    <li><a href="museum.html">Museum of the Mundane</a> - Exhibits of twist ties and orphaned lids</li>
+                    <li><a href="story-emporium.html">Impossible Inventions</a> - Absurd gadgets with warnings</li>
+                    <li><a href="weird.html">Weird Stuff</a> - Cryptids, dancing plagues, burning goats</li>
+                    <li><a href="conspiracies.html">Mundane Conspiracies</a> - The sock industry is watching</li>
+                    <li><a href="apologies.html">Object Apologies</a> - Letters from the things that wronged you</li>
+                    <li><a href="fantasy-tickets.html">Fantasy Tech Support</a> - When magical realms have IT problems</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>cultivated with curiosity :3</p>
+            <p class="small">a jord & claude production</p>
+        </footer>
+    </div>
+    <script src="garden.js"></script>
+</body>
+</html>

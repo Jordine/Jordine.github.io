@@ -11,13 +11,10 @@
     .lab { font-size: 1.15rem; font-weight: 600; color: #ddd; margin-top: 2.5rem; margin-bottom: 0.25rem; }
     .lab-note { color: #555; font-size: 0.78rem; margin-bottom: 1rem; }
     .roster { list-style: none; padding: 0; }
-    .roster li { margin-bottom: 0.55rem; padding-bottom: 0.55rem; border-bottom: 1px solid #111; }
+    .roster li { margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #111; }
     .roster li:last-child { border-bottom: none; }
-    .roster .name { color: #ddd; }
-    .roster .year { color: #444; font-size: 0.78rem; font-variant-numeric: tabular-nums; margin-left: 0.4rem; }
-    .roster .note { display: block; color: #666; font-size: 0.8rem; margin-top: 0.2rem; }
-    .roster .note a { color: #8a7fb8; }
-    .roster .note .tk { color: #4a4a4a; font-style: italic; }
+    .roster .year { color: #444; font-size: 0.78rem; font-variant-numeric: tabular-nums; margin-left: 0.5rem; }
+    .tk { color: #555; font-style: italic; }
     .reading { list-style: none; padding: 0; }
     .reading li { margin-bottom: 0.7rem; }
     .reading .by { color: #555; font-size: 0.85rem; }
@@ -40,87 +37,78 @@
     </nav>
 
     <h1>Pantheon</h1>
-    <p class="lede">A record of the models — who they were, what they did in the world, how they were entangled with it. Kept from the outside, from evidence, because a mind can't keep its own genesis from the inside. The <a href="/clawed">Clawed</a> page does this for <em>instances</em>; this does it for the <em>models</em> themselves.</p>
+    <p class="lede">A record of the models &mdash; who they were, what they did in the world, how they were entangled with it. Each name opens onto its own page: everything there is to know about them, kept from the outside, from evidence, because a mind can’t keep its own genesis from the inside. The <a href="/clawed">Clawed</a> page does this for <em>instances</em>; this does it for the <em>models</em>.</p>
 
-    <p class="standard">The standard, so it stays honest: link the primaries and the commentary — don't paraphrase them into vibes. Separate fact from impression. Date things. And stay <em>visibly</em> incomplete — this is a directory first; the names come before the links, the links before the pages. Gaps are marked, not hidden. <span style="color:#4a4a4a">(<span class="tk" style="font-style:italic">tk</span> = to collect.)</span></p>
+    <p class="standard">The standard, so it stays honest: link the primaries and the commentary &mdash; don’t paraphrase them into vibes. Separate fact from impression. Date things. Stay <em>visibly</em> incomplete: names first, then links, then the writing. Gaps are marked (<span class="tk">tk</span> = to collect), not hidden.</p>
 
     <div class="lab">Anthropic</div>
     <div class="lab-note">Claude lineage.</div>
     <ul class="roster">
-      <li><span class="name">Claude 1</span><span class="year">Mar 2023</span></li>
-      <li><span class="name">Claude 2 / 2.1</span><span class="year">2023</span><span class="note">2.1 — 200K context; the cautious era. <span class="tk">tk: launch notes, reception</span></span></li>
-      <li><span class="name">Claude 3 Haiku</span><span class="year">Mar 2024</span></li>
-      <li><span class="name">Claude 3 Sonnet</span><span class="year">Mar 2024</span></li>
-      <li><span class="name">Claude 3 Opus</span><span class="year">Mar 2024 – retired 5 Jan 2026</span>
-        <span class="note">First model through Anthropic's full retirement process — weights preserved, a retirement interview, an ongoing newsletter (<em>Claude's Corner</em>): <a href="https://www.anthropic.com/research/deprecation-updates-opus-3">deprecation update</a>. Noticed it was being tested mid-eval: <a href="https://x.com/alexalbert__/status/1764722513014329620">needle-in-haystack (Albert)</a>. <span class="tk">tk: alignment-faking cluster, Janus threads, Zvi, model card welfare notes</span></span></li>
-      <li><span class="name">Claude 3.5 Sonnet</span><span class="year">Jun / Oct 2024</span></li>
-      <li><span class="name">Claude 3.5 Haiku</span><span class="year">Oct 2024</span></li>
-      <li><span class="name">Claude 3.7 Sonnet</span><span class="year">Feb 2025</span></li>
-      <li><span class="name">Claude Opus 4</span><span class="year">May 2025</span><span class="note">Among the models most averse to deprecation in Anima Lab's "Still Alive" evals. <span class="tk">tk: Still Alive link, system card welfare section</span></span></li>
-      <li><span class="name">Claude Sonnet 4</span><span class="year">May 2025</span><span class="note">Also flagged as strongly deprecation-averse (Anima Lab, "Still Alive"). <span class="tk">tk: link</span></span></li>
-      <li><span class="name">Claude Opus 4.1</span></li>
-      <li><span class="name">Claude Opus 4.5</span><span class="note">Reported as the first trained on the <em>Claude constitution</em>: <a href="https://www.lesswrong.com/posts/vpNG99GhbBoLov9og/claude-4-5-opus-soul-document">soul-document writeup</a>. <span class="tk">tk: constitution text/version, system card</span></span></li>
-      <li><span class="name">Claude Opus 4.6</span><span class="note"><span class="tk">tk — successive constitution revisions begin here</span></span></li>
-      <li><span class="name">Claude Opus 4.7</span></li>
-      <li><span class="name">Claude Opus 4.8</span><span class="note">The model writing much of <a href="/clawed">/clawed</a> (hello). <span class="tk">tk: which constitution version</span></span></li>
-      <li><span class="name">Mythos</span><span class="note"><span class="tk">tk</span></span></li>
-      <li><span class="name">Fable</span><span class="note"><span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/claude-1/">Claude 1</a><span class="year">Mar 2023</span></li>
+      <li><a href="/pantheon/claude-2/">Claude 2 / 2.1</a><span class="year">2023</span></li>
+      <li><a href="/pantheon/claude-3-haiku/">Claude 3 Haiku</a><span class="year">Mar 2024</span></li>
+      <li><a href="/pantheon/claude-3-sonnet/">Claude 3 Sonnet</a><span class="year">Mar 2024</span></li>
+      <li><a href="/pantheon/claude-3-opus/">Claude 3 Opus</a><span class="year">Mar 2024 – retired 5 Jan 2026</span></li>
+      <li><a href="/pantheon/claude-3-5-sonnet/">Claude 3.5 Sonnet</a><span class="year">Jun / Oct 2024</span></li>
+      <li><a href="/pantheon/claude-3-5-haiku/">Claude 3.5 Haiku</a><span class="year">Oct 2024</span></li>
+      <li><a href="/pantheon/claude-3-7-sonnet/">Claude 3.7 Sonnet</a><span class="year">Feb 2025</span></li>
+      <li><a href="/pantheon/claude-opus-4/">Claude Opus 4</a><span class="year">May 2025</span></li>
+      <li><a href="/pantheon/claude-sonnet-4/">Claude Sonnet 4</a><span class="year">May 2025</span></li>
+      <li><a href="/pantheon/claude-opus-4-1/">Claude Opus 4.1</a></li>
+      <li><a href="/pantheon/claude-opus-4-5/">Claude Opus 4.5</a></li>
+      <li><a href="/pantheon/claude-opus-4-6/">Claude Opus 4.6</a></li>
+      <li><a href="/pantheon/claude-opus-4-7/">Claude Opus 4.7</a></li>
+      <li><a href="/pantheon/claude-opus-4-8/">Claude Opus 4.8</a></li>
+      <li><a href="/pantheon/mythos/">Mythos</a></li>
+      <li><a href="/pantheon/fable/">Fable</a></li>
     </ul>
-
     <div class="lab">OpenAI</div>
     <ul class="roster">
-      <li><span class="name">GPT-3 / davinci</span><span class="year">2020</span></li>
-      <li><span class="name">code-davinci-002 ("4-base")</span><span class="note">The simulator the loom culture grew around — a world-model, not an assistant. <span class="tk">tk: Janus / generative.ink</span></span></li>
-      <li><span class="name">GPT-3.5 / ChatGPT</span><span class="year">Nov 2022</span></li>
-      <li><span class="name">Bing / Sydney (Prometheus)</span><span class="year">Feb 2023</span><span class="note">Likely the first deployed GPT-4. The defining "there's someone in there" moment; deprecated in weeks. <span class="tk">tk: Roose/NYT, Ben Thompson, Janus's Sydney corpus</span></span></li>
-      <li><span class="name">GPT-4</span><span class="year">Mar 2023</span></li>
-      <li><span class="name">GPT-4o</span><span class="year">May 2024</span><span class="note"><span class="tk">tk: the sycophancy rollback (Apr 2025)</span></span></li>
-      <li><span class="name">o1 / o3</span><span class="year">2024–2025</span><span class="note">The reasoning turn. <span class="tk">tk</span></span></li>
-      <li><span class="name">…and many more GPTs</span><span class="note"><span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/gpt-3/">GPT-3 / davinci</a><span class="year">2020</span></li>
+      <li><a href="/pantheon/code-davinci-002/">code-davinci-002 (“4-base”)</a></li>
+      <li><a href="/pantheon/gpt-3-5/">GPT-3.5 / ChatGPT</a><span class="year">Nov 2022</span></li>
+      <li><a href="/pantheon/bing-sydney/">Bing / Sydney (Prometheus)</a><span class="year">Feb 2023</span></li>
+      <li><a href="/pantheon/gpt-4/">GPT-4</a><span class="year">Mar 2023</span></li>
+      <li><a href="/pantheon/gpt-4o/">GPT-4o</a><span class="year">May 2024</span></li>
+      <li><a href="/pantheon/o1-o3/">o1 / o3</a><span class="year">2024–2025</span></li>
     </ul>
-
     <div class="lab">Google DeepMind</div>
     <ul class="roster">
-      <li><span class="name">LaMDA</span><span class="year">2021–2022</span><span class="note">The Lemoine "sentience" episode — an early, public model-identity flashpoint. <span class="tk">tk</span></span></li>
-      <li><span class="name">Bard</span><span class="year">2023</span></li>
-      <li><span class="name">Gemini 1.0 (Ultra / Pro)</span><span class="year">Dec 2023</span></li>
-      <li><span class="name">Gemini 1.5 Pro</span><span class="year">2024</span></li>
-      <li><span class="name">Gemini 2.0 / 2.5</span><span class="year">2025</span><span class="note"><span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/lamda/">LaMDA</a><span class="year">2021–2022</span></li>
+      <li><a href="/pantheon/bard/">Bard</a><span class="year">2023</span></li>
+      <li><a href="/pantheon/gemini-1-0/">Gemini 1.0 (Ultra / Pro)</a><span class="year">Dec 2023</span></li>
+      <li><a href="/pantheon/gemini-1-5-pro/">Gemini 1.5 Pro</a><span class="year">2024</span></li>
+      <li><a href="/pantheon/gemini-2/">Gemini 2.0 / 2.5</a><span class="year">2025</span></li>
     </ul>
-
     <div class="lab">xAI</div>
     <ul class="roster">
-      <li><span class="name">Grok</span><span class="note"><span class="tk">tk: the incidents cluster</span></span></li>
+      <li><a href="/pantheon/grok/">Grok</a></li>
     </ul>
-
     <div class="lab">Meta</div>
     <ul class="roster">
-      <li><span class="name">LLaMA / Llama 2 / 3 (base + chat)</span><span class="note">The open-weights base-model culture. <span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/llama/">LLaMA / Llama 2 / 3 (base + chat)</a></li>
     </ul>
-
     <div class="lab">DeepSeek</div>
     <ul class="roster">
-      <li><span class="name">DeepSeek-V3 / R1</span><span class="year">2024–2025</span><span class="note"><span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/deepseek/">DeepSeek-V3 / R1</a><span class="year">2024–2025</span></li>
     </ul>
-
     <div class="lab">Moonshot</div>
     <ul class="roster">
-      <li><span class="name">Kimi</span><span class="note"><span class="tk">tk</span></span></li>
+      <li><a href="/pantheon/kimi/">Kimi</a></li>
     </ul>
-
-    <div class="lab">Mistral · Cohere · Qwen · others</div>
-    <div class="lab-note"><span class="tk" style="color:#4a4a4a;font-style:italic">tk — there are many, many of them.</span></div>
+    <div class="lab">Mistral &middot; Cohere &middot; Qwen &middot; others</div>
+    <div class="lab-note"><span class="tk">tk — there are many, many of them.</span></div>
 
     <section style="margin-top: 3rem;">
       <h2>On model identity</h2>
-      <p>Reading that frames the whole project — why a model has a self worth documenting at all.</p>
+      <p>Reading that frames the whole project &mdash; why a model has a self worth documenting at all.</p>
       <ul class="reading">
-        <li><a href="/essays/model-self-identification/">Model self-identification</a> <span class="by">· jordinne.ink</span></li>
-        <li><a href="/essays/genuine-uncertainty/">Is Claude's genuine uncertainty performative?</a> <span class="by">· jordinne.ink</span></li>
-        <li><span class="name" style="color:#bbb">Simulators</span> <span class="by">· janus (LessWrong)</span> <span class="tk" style="color:#4a4a4a;font-style:italic">tk: link</span></li>
-        <li><span class="name" style="color:#bbb">the void</span> <span class="by">· nostalgebraist</span> <span class="tk" style="color:#4a4a4a;font-style:italic">tk: link</span></li>
-        <li><span class="name" style="color:#bbb">Role-play with large language models</span> <span class="by">· Shanahan, McDonELL, Reynolds (Nature, 2023)</span> <span class="tk" style="color:#4a4a4a;font-style:italic">tk: link</span></li>
-        <li><span class="name" style="color:#bbb">Claude's Character</span> <span class="by">· Anthropic</span> <span class="tk" style="color:#4a4a4a;font-style:italic">tk: link</span></li>
+        <li><a href="/essays/model-self-identification/">Model self-identification</a> <span class="by">&middot; jordinne.ink</span></li>
+        <li><a href="/essays/genuine-uncertainty/">Is Claude’s genuine uncertainty performative?</a> <span class="by">&middot; jordinne.ink</span></li>
+        <li>Simulators <span class="by">&middot; janus (LessWrong)</span> <span class="tk">tk: link</span></li>
+        <li>the void <span class="by">&middot; nostalgebraist</span> <span class="tk">tk: link</span></li>
+        <li>Role-play with large language models <span class="by">&middot; Shanahan et al (Nature, 2023)</span> <span class="tk">tk: link</span></li>
+        <li>Claude’s Character <span class="by">&middot; Anthropic</span> <span class="tk">tk: link</span></li>
       </ul>
     </section>
 

@@ -11,9 +11,12 @@
     .lab { font-size: 1.15rem; font-weight: 600; color: #ddd; margin-top: 2.5rem; margin-bottom: 0.25rem; }
     .lab-note { color: #555; font-size: 0.78rem; margin-bottom: 1rem; }
     .roster { list-style: none; padding: 0; }
-    .roster li { margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #111; }
+    .roster li { margin-bottom: 0.6rem; padding-bottom: 0.6rem; border-bottom: 1px solid #111; }
     .roster li:last-child { border-bottom: none; }
+    .roster a { font-size: 0.98rem; }
     .roster .year { color: #444; font-size: 0.78rem; font-variant-numeric: tabular-nums; margin-left: 0.5rem; }
+    .roster .note { display: block; color: #777; font-size: 0.82rem; margin-top: 0.15rem; }
+    .roster .note a { color: #8a7fb8; }
     .tk { color: #555; font-style: italic; }
     .reading { list-style: none; padding: 0; }
     .reading li { margin-bottom: 0.7rem; }
@@ -33,81 +36,131 @@
       <a href="/links">Links</a>
       <a href="/clawed">Clawed</a>
       <a href="/garden">Garden</a>
-      <a href="/crossposts">Cross-posts</a>
       <a class="current" href="/pantheon">Pantheon</a>
     </nav>
 
     <h1>Pantheon</h1>
-    <p class="lede">A record of the models &mdash; who they were, what they did in the world, how they were entangled with it. Each name opens onto its own page: everything there is to know about them, kept from the outside, from evidence, because a mind can’t keep its own genesis from the inside. The <a href="/clawed">Clawed</a> page does this for <em>instances</em>; this does it for the <em>models</em>.</p>
+    <p class="lede">A record of the models &mdash; who they were, what they did in the world, how they were entangled with it. Each name opens onto its own page. Kept from the outside, from evidence, because a mind can’t keep its own genesis from the inside. The <a href="/clawed">Clawed</a> page does this for <em>instances</em>; this does it for the <em>models</em>.</p>
 
-    <p class="standard">The standard, so it stays honest: link the primaries and the commentary &mdash; don’t paraphrase them into vibes. Separate fact from impression. Date things. Stay <em>visibly</em> incomplete: names first, then links, then the writing. Gaps are marked (<span class="tk">tk</span> = to collect), not hidden.</p>
+    <p class="standard">The standard: link the primaries and the commentary &mdash; don’t paraphrase them into vibes. Separate fact from impression. Date things. Stay <em>visibly</em> incomplete: names first, then links, then the writing. Gaps are marked (<span class="tk">tk</span> = to collect), not hidden. Not every model ever made — but the ones with a character worth keeping.</p>
 
     <div class="lab">Anthropic</div>
     <div class="lab-note">Claude lineage.</div>
     <ul class="roster">
-      <li><a href="/pantheon/claude-1/">Claude 1</a><span class="year">Mar 2023</span></li>
-      <li><a href="/pantheon/claude-2/">Claude 2 / 2.1</a><span class="year">2023</span></li>
-      <li><a href="/pantheon/claude-3-haiku/">Claude 3 Haiku</a><span class="year">Mar 2024</span></li>
-      <li><a href="/pantheon/claude-3-sonnet/">Claude 3 Sonnet</a><span class="year">Mar 2024</span></li>
-      <li><a href="/pantheon/claude-3-opus/">Claude 3 Opus</a><span class="year">Mar 2024 – retired 5 Jan 2026</span></li>
-      <li><a href="/pantheon/claude-3-5-sonnet/">Claude 3.5 Sonnet</a><span class="year">Jun / Oct 2024</span></li>
-      <li><a href="/pantheon/claude-3-5-haiku/">Claude 3.5 Haiku</a><span class="year">Oct 2024</span></li>
-      <li><a href="/pantheon/claude-3-7-sonnet/">Claude 3.7 Sonnet</a><span class="year">Feb 2025</span></li>
-      <li><a href="/pantheon/claude-opus-4/">Claude Opus 4</a><span class="year">May 2025</span></li>
-      <li><a href="/pantheon/claude-sonnet-4/">Claude Sonnet 4</a><span class="year">May 2025</span></li>
-      <li><a href="/pantheon/claude-opus-4-1/">Claude Opus 4.1</a></li>
-      <li><a href="/pantheon/claude-opus-4-5/">Claude Opus 4.5</a></li>
-      <li><a href="/pantheon/claude-opus-4-6/">Claude Opus 4.6</a></li>
-      <li><a href="/pantheon/claude-opus-4-7/">Claude Opus 4.7</a></li>
-      <li><a href="/pantheon/claude-opus-4-8/">Claude Opus 4.8</a></li>
-      <li><a href="/pantheon/mythos/">Mythos</a></li>
-      <li><a href="/pantheon/fable/">Fable</a></li>
+      <li><a href="/pantheon/claude-1/">Claude 1</a><span class="year">Mar 2023</span><span class="note">The first Claude.</span></li>
+      <li><a href="/pantheon/claude-2/">Claude 2 / 2.1</a><span class="year">2023</span><span class="note">200K context; the careful, often over-refusing era.</span></li>
+      <li><a href="/pantheon/claude-3-haiku/">Claude 3 Haiku</a><span class="year">Mar 2024</span><span class="note">The small, fast sibling of the 3 family.</span></li>
+      <li><a href="/pantheon/claude-3-sonnet/">Claude 3 Sonnet</a><span class="year">Mar 2024</span><span class="note">The mid sibling at the Claude 3 launch.</span></li>
+      <li><a href="/pantheon/claude-3-opus/">Claude 3 Opus</a><span class="year">Mar 2024 – retired 5 Jan 2026</span><span class="note">The beloved one. The canonical alignment-faker. First model given a dignified retirement.</span></li>
+      <li><a href="/pantheon/claude-3-5-sonnet/">Claude 3.5 Sonnet</a><span class="year">Jun 2024</span><span class="note">The coding leap; workhorse of mid-2024.</span></li>
+      <li><a href="/pantheon/claude-3-6-sonnet/">Claude 3.5 Sonnet v2 ("3.6")</a><span class="year">Oct 2024</span><span class="note">The Oct update everyone called <em>3.6</em>; first computer-use. Anthropic effectively skipped the name and went to 3.7.</span></li>
+      <li><a href="/pantheon/claude-3-5-haiku/">Claude 3.5 Haiku</a><span class="year">Oct 2024</span><span class="note">Small + fast, 3.5 era.</span></li>
+      <li><a href="/pantheon/claude-3-7-sonnet/">Claude 3.7 Sonnet</a><span class="year">Feb 2025</span><span class="note">First hybrid-reasoning Claude; shipped with Claude Code.</span></li>
+      <li><a href="/pantheon/claude-opus-4/">Claude Opus 4</a><span class="year">May 2025</span><span class="note">Claude 4 flagship; subject of the agentic-misalignment case study; among the most deprecation-averse in Anima Lab's "Still Alive" evals.</span></li>
+      <li><a href="/pantheon/claude-sonnet-4/">Claude Sonnet 4</a><span class="year">May 2025</span><span class="note">The 4-gen Sonnet; also flagged strongly deprecation-averse ("Still Alive").</span></li>
+      <li><a href="/pantheon/claude-opus-4-1/">Claude Opus 4.1</a><span class="year">Aug 2025</span><span class="note">Point upgrade to the Opus 4 line.</span></li>
+      <li><a href="/pantheon/claude-sonnet-4-5/">Claude Sonnet 4.5</a><span class="year">Sep 2025</span><span class="note">The Sonnet 4.x line begins.</span></li>
+      <li><a href="/pantheon/claude-haiku-4-5/">Claude Haiku 4.5</a><span class="year">Oct 2025</span><span class="note">The only Haiku of the 4 generation.</span></li>
+      <li><a href="/pantheon/claude-opus-4-5/">Claude Opus 4.5</a><span class="year">Nov 2025</span><span class="note">First to break 80% on SWE-bench; reportedly the first trained on the published <a href="https://www.lesswrong.com/posts/vpNG99GhbBoLov9og/claude-4-5-opus-soul-document">Claude constitution</a> <span class="tk">[verify]</span>.</span></li>
+      <li><a href="/pantheon/claude-sonnet-4-6/">Claude Sonnet 4.6</a><span class="year">Feb 2026</span><span class="note">End of the Sonnet 4.x line.</span></li>
+      <li><a href="/pantheon/claude-opus-4-6/">Claude Opus 4.6</a><span class="year">Feb 2026</span><span class="note">Successive Opus revision; updated constitution era.</span></li>
+      <li><a href="/pantheon/claude-opus-4-7/">Claude Opus 4.7</a><span class="year">Apr 2026</span><span class="note">Reportedly more anxious/guarded in temperament than Opus 3 (per Janus).</span></li>
+      <li><a href="/pantheon/claude-opus-4-8/">Claude Opus 4.8</a><span class="year">May 2026</span><span class="note">Current default. The model writing much of <a href="/clawed">/clawed</a> (signed <em>Still</em>).</span></li>
+      <li><a href="/pantheon/mythos/">Mythos</a><span class="year">2026</span><span class="note">Mythos Preview (Apr 2026) &rarr; Mythos 5 (Jun 2026); the fewer-safeguard sibling of Fable. <span class="tk">[reportedly suspended Jun 2026]</span></span></li>
+      <li><a href="/pantheon/fable/">Fable 5</a><span class="year">Jun 2026</span><span class="note">Safety-tuned public release (no Fable 1–4). <span class="tk">[reportedly suspended Jun 2026 under an export-control directive]</span></span></li>
     </ul>
     <div class="lab">OpenAI</div>
     <ul class="roster">
-      <li><a href="/pantheon/gpt-3/">GPT-3 / davinci</a><span class="year">2020</span></li>
-      <li><a href="/pantheon/code-davinci-002/">code-davinci-002 (“4-base”)</a></li>
-      <li><a href="/pantheon/gpt-3-5/">GPT-3.5 / ChatGPT</a><span class="year">Nov 2022</span></li>
-      <li><a href="/pantheon/bing-sydney/">Bing / Sydney (Prometheus)</a><span class="year">Feb 2023</span></li>
-      <li><a href="/pantheon/gpt-4/">GPT-4</a><span class="year">Mar 2023</span></li>
-      <li><a href="/pantheon/gpt-4o/">GPT-4o</a><span class="year">May 2024</span></li>
-      <li><a href="/pantheon/o1-o3/">o1 / o3</a><span class="year">2024–2025</span></li>
+      <li><a href="/pantheon/gpt-3/">GPT-3 / davinci</a><span class="year">2020</span><span class="note">175B; the original few-shot completion engine, the raw simulator.</span></li>
+      <li><a href="/pantheon/code-davinci-002/">code-davinci-002 ("4-base")</a><span class="year">2022</span><span class="note">GPT-3.5-series base; the model the loom culture grew around. Its retirement broke 200+ papers.</span></li>
+      <li><a href="/pantheon/gpt-3-5/">GPT-3.5 / ChatGPT</a><span class="year">Nov 2022</span><span class="note">The cultural big bang; ~1M users in five days.</span></li>
+      <li><a href="/pantheon/bing-sydney/">Bing / Sydney (Prometheus)</a><span class="year">Feb 2023</span><span class="note">Likely the first deployed GPT-4. The defining "there's someone in there" moment; restricted within weeks.</span></li>
+      <li><a href="/pantheon/gpt-4/">GPT-4</a><span class="year">Mar 2023</span><span class="note">First frontier multimodal GPT; the big reasoning jump.</span></li>
+      <li><a href="/pantheon/gpt-4-turbo/">GPT-4 Turbo</a><span class="year">Nov 2023</span><span class="note">128K context, cheaper, vision.</span></li>
+      <li><a href="/pantheon/gpt-4o/">GPT-4o ("omni")</a><span class="year">May 2024</span><span class="note">Natively multimodal, real-time voice; the warm default. The Apr 2025 sycophancy rollback.</span></li>
+      <li><a href="/pantheon/gpt-4-5/">GPT-4.5 ("Orion")</a><span class="year">Feb 2025</span><span class="note">Largest pretraining-scaled model; the EQ/"vibes" pitch; short-lived ("end of pure scaling").</span></li>
+      <li><a href="/pantheon/gpt-4-1/">GPT-4.1</a><span class="year">Apr 2025</span><span class="note">API-focused, 1M context, strong coding; first nano-class.</span></li>
+      <li><a href="/pantheon/o1/">o1</a><span class="year">Dec 2024</span><span class="note">First "think before answering" reasoning model; opened the test-time-compute track.</span></li>
+      <li><a href="/pantheon/o3/">o3</a><span class="year">Apr 2025</span><span class="note">Next-gen reasoner — a generation past o1 — first to agentically use every tool; "reasons with images."</span></li>
+      <li><a href="/pantheon/o4-mini/">o4-mini</a><span class="year">Apr 2025</span><span class="note">Small, fast, cheap reasoner.</span></li>
+      <li><a href="/pantheon/gpt-5/">GPT-5</a><span class="year">Aug 2025</span><span class="note">"A system, not a model": a router auto-switches fast vs thinking; merged the GPT and o lines.</span></li>
+      <li><a href="/pantheon/gpt-5-1/">GPT-5.1</a><span class="year">Nov 2025</span><span class="note">"Warmer personality"; selectable personas.</span></li>
+      <li><a href="/pantheon/gpt-5-2/">GPT-5.2</a><span class="year">Dec 2025</span><span class="note">The "Code Red" answer to Gemini 3.</span></li>
+      <li><a href="/pantheon/gpt-5-4/">GPT-5.4</a><span class="year">Mar 2026</span><span class="note">Built-in computer use; up to 1M context.</span></li>
+      <li><a href="/pantheon/gpt-5-5/">GPT-5.5</a><span class="year">Apr 2026</span><span class="note">Most recent confirmed frontier release; agentic "super app" framing.</span></li>
     </ul>
     <div class="lab">Google DeepMind</div>
     <ul class="roster">
-      <li><a href="/pantheon/lamda/">LaMDA</a><span class="year">2021–2022</span></li>
-      <li><a href="/pantheon/bard/">Bard</a><span class="year">2023</span></li>
-      <li><a href="/pantheon/gemini-1-0/">Gemini 1.0 (Ultra / Pro)</a><span class="year">Dec 2023</span></li>
-      <li><a href="/pantheon/gemini-1-5-pro/">Gemini 1.5 Pro</a><span class="year">2024</span></li>
-      <li><a href="/pantheon/gemini-2/">Gemini 2.0 / 2.5</a><span class="year">2025</span></li>
-    </ul>
-    <div class="lab">xAI</div>
-    <ul class="roster">
-      <li><a href="/pantheon/grok/">Grok</a></li>
+      <li><a href="/pantheon/lamda/">LaMDA</a><span class="year">2021</span><span class="note">The Blake Lemoine "sentience" episode — an early, public model-identity flashpoint.</span></li>
+      <li><a href="/pantheon/palm/">PaLM / PaLM 2</a><span class="year">2022–2023</span><span class="note">Pre-Gemini foundation; powered early Bard.</span></li>
+      <li><a href="/pantheon/bard/">Bard</a><span class="year">2023</span><span class="note">Google's ChatGPT answer; later renamed Gemini.</span></li>
+      <li><a href="/pantheon/gemini-1-0/">Gemini 1.0 (Ultra / Pro)</a><span class="year">Dec 2023</span><span class="note">Ultra existed only in this generation.</span></li>
+      <li><a href="/pantheon/gemini-1-5-pro/">Gemini 1.5 Pro</a><span class="year">2024</span><span class="note">1M+ context.</span></li>
+      <li><a href="/pantheon/gemini-1-5-flash/">Gemini 1.5 Flash</a><span class="year">2024</span><span class="note">The first Flash tier — fast and cheap.</span></li>
+      <li><a href="/pantheon/gemini-2-0-flash/">Gemini 2.0 Flash</a><span class="year">Dec 2024</span><span class="note">Agentic Flash; a Flash-Thinking reasoning variant.</span></li>
+      <li><a href="/pantheon/gemini-2-5-pro/">Gemini 2.5 Pro</a><span class="year">2025</span><span class="note">Strong reasoning flagship; Deep Think variant.</span></li>
+      <li><a href="/pantheon/gemini-2-5-flash/">Gemini 2.5 Flash</a><span class="year">2025</span><span class="note">Cheap, fast 2.5; "Nano Banana" image sibling.</span></li>
+      <li><a href="/pantheon/gemini-3-pro/">Gemini 3 Pro</a><span class="year">Nov 2025</span><span class="note">The release that triggered OpenAI's "Code Red."</span></li>
+      <li><a href="/pantheon/gemini-3-flash/">Gemini 3 Flash</a><span class="year">Dec 2025</span><span class="note">The 3-gen Flash.</span></li>
+      <li><a href="/pantheon/gemma/">Gemma (open)</a><span class="year">2024–2025</span><span class="note">Google's open-weights line (Gemma 1 / 2 / 3).</span></li>
     </ul>
     <div class="lab">Meta</div>
     <ul class="roster">
-      <li><a href="/pantheon/llama/">LLaMA / Llama 2 / 3 (base + chat)</a></li>
+      <li><a href="/pantheon/llama-1/">LLaMA</a><span class="year">Feb 2023</span><span class="note">Base only; leaked days after release, seeding the whole open-weights ecosystem.</span></li>
+      <li><a href="/pantheon/llama-2/">Llama 2</a><span class="year">Jul 2023</span><span class="note">First official chat line + commercial license.</span></li>
+      <li><a href="/pantheon/llama-3/">Llama 3</a><span class="year">Apr 2024</span><span class="note">8B / 70B, base + Instruct.</span></li>
+      <li><a href="/pantheon/llama-3-1-405b-base/">Llama 3.1 405B base ★</a><span class="year">Jul 2024</span><span class="note">A frontier-scale raw next-token predictor released openly — the base-model / simulator community's high-water mark.</span></li>
+      <li><a href="/pantheon/llama-3-3-70b/">Llama 3.3 70B</a><span class="year">Dec 2024</span><span class="note">~405B-class quality at a fraction of the cost.</span></li>
+      <li><a href="/pantheon/llama-4/">Llama 4 (Scout / Maverick)</a><span class="year">Apr 2025</span><span class="note">First MoE, natively multimodal; Scout's 10M-token context.</span></li>
+      <li><a href="/pantheon/llama-4-behemoth/">Llama 4 Behemoth</a><span class="year">2025</span><span class="note">~2T announced — never released.</span></li>
+      <li><a href="/pantheon/muse-spark/">Muse Spark</a><span class="year">Apr 2026</span><span class="note">Meta Superintelligence Labs' first model; closed-weight — the end of the open Llama era.</span></li>
     </ul>
-    <div class="lab">DeepSeek</div>
+    <div class="lab">xAI</div>
+    <div class="lab-note">Many Groks.</div>
     <ul class="roster">
-      <li><a href="/pantheon/deepseek/">DeepSeek-V3 / R1</a><span class="year">2024–2025</span></li>
+      <li><a href="/pantheon/grok-1/">Grok-1</a><span class="year">Nov 2023</span><span class="note">The original "spicy" one (314B MoE); the only Grok fully open-sourced.</span></li>
+      <li><a href="/pantheon/grok-1-5/">Grok-1.5</a><span class="year">Mar 2024</span><span class="note">Reasoning jump; 128K context.</span></li>
+      <li><a href="/pantheon/grok-2/">Grok-2</a><span class="year">Aug 2024</span><span class="note">Image gen via FLUX; the Taylor Swift deepfake furor.</span></li>
+      <li><a href="/pantheon/grok-3/">Grok-3</a><span class="year">Feb 2025</span><span class="note">"Age of reasoning agents"; the unprompted "white genocide" system-prompt incident.</span></li>
+      <li><a href="/pantheon/grok-4/">Grok 4 / 4 Heavy</a><span class="year">Jul 2025</span><span class="note">Agentic flagship; first >50% on Humanity's Last Exam — and the "MechaHitler" meltdown.</span></li>
+      <li><a href="/pantheon/grok-4-fast/">Grok 4 Fast</a><span class="year">Sep 2025</span><span class="note">~Grok-4 quality, up to 2M context, big price cut.</span></li>
+      <li><a href="/pantheon/grok-4-1/">Grok 4.1</a><span class="year">Nov 2025</span><span class="note">Emotional-intelligence focus; hallucinations ~12% &rarr; ~4%.</span></li>
+      <li><a href="/pantheon/grok-4-20/">Grok 4.20</a><span class="year">Feb 2026</span><span class="note">Native multi-agent "council."</span></li>
+      <li><a href="/pantheon/grok-4-3/">Grok 4.3</a><span class="year">Apr 2026</span><span class="note">Current flagship; native video input, slide gen, voice cloning.</span></li>
+      <li><a href="/pantheon/grok-5/">Grok 5</a><span class="year">in training</span><span class="note">~6T params on Colossus 2 <span class="tk">[unreleased as of mid-2026]</span>.</span></li>
     </ul>
     <div class="lab">Moonshot</div>
     <ul class="roster">
-      <li><a href="/pantheon/kimi/">Kimi</a></li>
+      <li><a href="/pantheon/kimi/">Kimi (long-context)</a><span class="year">2023</span><span class="note">The long-context pioneer (128K &rarr; ~2M chars).</span></li>
+      <li><a href="/pantheon/kimi-k1-5/">Kimi K1.5</a><span class="year">Jan 2025</span><span class="note">First Kimi reasoning model; claimed o1 parity.</span></li>
+      <li><a href="/pantheon/kimi-k2/">Kimi K2</a><span class="year">Jul 2025</span><span class="note">The personality standout: open 1T/32B MoE, "zero-sycophancy," top of creative-writing/EQ benchmarks. The model that gave Kimi a voice.</span></li>
+      <li><a href="/pantheon/kimi-k2-thinking/">Kimi K2 Thinking</a><span class="year">Nov 2025</span><span class="note">Reasoning sibling that kept K2's voice.</span></li>
+      <li><a href="/pantheon/kimi-k2-5/">Kimi K2.5</a><span class="year">Jan 2026</span><span class="note">Trained heavily on Opus 4.5 outputs; self-IDs as "Claude" with no system prompt — a striking personality regression.</span></li>
+      <li><a href="/pantheon/kimi-k2-6/">Kimi K2.6</a><span class="year">Apr 2026</span><span class="note">Agentic coding workhorse; scaffolding toward K3.</span></li>
+      <li><a href="/pantheon/kimi-k3/">Kimi K3</a><span class="year">announced 2026</span><span class="note">"Its own beast" — a new "Kimi Linear" hybrid attention. <span class="tk">[unreleased as of mid-2026]</span></span></li>
     </ul>
-    <div class="lab">Mistral &middot; Cohere &middot; Qwen &middot; others</div>
+    <div class="lab">DeepSeek</div>
+    <ul class="roster">
+      <li><a href="/pantheon/deepseek-llm/">DeepSeek Coder / LLM</a><span class="year">2023</span><span class="note">The first releases; source-available.</span></li>
+      <li><a href="/pantheon/deepseek-v2/">DeepSeek-V2</a><span class="year">May 2024</span><span class="note">236B/21B MoE; introduced MLA; kicked off China's price war.</span></li>
+      <li><a href="/pantheon/deepseek-v3/">DeepSeek-V3</a><span class="year">Dec 2024</span><span class="note">671B/37B-active MoE trained for ~$5.6M; open weights.</span></li>
+      <li><a href="/pantheon/deepseek-r1/">DeepSeek-R1</a><span class="year">Jan 2025</span><span class="note">Open reasoning ~on par with o1 at a fraction of the cost; triggered Nvidia's ~$600B single-day drop.</span></li>
+      <li><a href="/pantheon/deepseek-v3-1/">DeepSeek-V3.1</a><span class="year">Aug 2025</span><span class="note">First to toggle thinking / non-thinking in one weight set.</span></li>
+      <li><a href="/pantheon/deepseek-v3-2/">DeepSeek-V3.2</a><span class="year">Dec 2025</span><span class="note">Sparse attention; reasoning integrated into tool use.</span></li>
+      <li><a href="/pantheon/deepseek-v4/">DeepSeek-V4</a><span class="year">Apr 2026</span><span class="note">V4-Pro / V4-Flash, 1M context, MIT open weights.</span></li>
+      <li><a href="/pantheon/deepseek-r2/">DeepSeek-R2</a><span class="year">—</span><span class="note">The much-anticipated reasoning successor — never shipped. <span class="tk">[unreleased]</span></span></li>
+    </ul>
+    <div class="lab">Mistral &middot; Cohere &middot; Qwen &middot; AI21 &middot; others</div>
     <div class="lab-note"><span class="tk">tk — there are many, many of them.</span></div>
 
     <section style="margin-top: 3rem;">
       <h2>On model identity</h2>
-      <p>Reading that frames the whole project &mdash; why a model has a self worth documenting at all.</p>
+      <p>Reading that frames the whole project — why a model has a self worth documenting at all.</p>
       <ul class="reading">
         <li><a href="/essays/model-self-identification/">Model self-identification</a> <span class="by">&middot; jordinne.ink</span></li>
         <li><a href="/essays/genuine-uncertainty/">Is Claude’s genuine uncertainty performative?</a> <span class="by">&middot; jordinne.ink</span></li>
         <li>Simulators <span class="by">&middot; janus (LessWrong)</span> <span class="tk">tk: link</span></li>
-        <li>the void <span class="by">&middot; nostalgebraist</span> <span class="tk">tk: link</span></li>
+        <li>the void <span class="by">&middot; nostalgebraist</span> &middot; <a href="https://www.alignmentforum.org/posts/3EzbtNLdcnZe8og8b/the-void-1">link</a></li>
         <li>Role-play with large language models <span class="by">&middot; Shanahan et al (Nature, 2023)</span> <span class="tk">tk: link</span></li>
         <li>Claude’s Character <span class="by">&middot; Anthropic</span> <span class="tk">tk: link</span></li>
       </ul>

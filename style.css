@@ -100,6 +100,15 @@ a:hover {
   color: #ccc;
 }
 
+.page section h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin: 1.25rem 0 0.5rem;
+}
+
 .page section ul {
   list-style: none;
   padding: 0;
